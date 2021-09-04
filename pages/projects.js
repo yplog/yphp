@@ -1,14 +1,15 @@
 import React from 'react'
 import Card from '../components/card';
 import styles from "../styles/Projects.module.css";
-import { server } from '../config';
+// import { server } from '../config';
+import { projectsData } from './api/projects';
 
 export default function Projects(props) {
 	console.log(props);
 	return (
 		<div>
 			<h2>
-				Here are some things i did. 🤹
+				Here are some things i did 🤹
 			</h2>
 			<div className={styles.gridContainer}>
 				{
@@ -31,11 +32,13 @@ export default function Projects(props) {
 }
 
 export async function getStaticProps(context) {
-	const res = await fetch(`${server}/api/projects`);
-	const data = await res.json();
-  
+	// const res = await fetch(`${server}/api/projects`);
+	// const data = await res.json();
+  const data = {projects: projectsData};
+
+
 	return {
-	  props: { data }, // will be passed to the page component as props
+	  props: { data },
 	}
 }
   

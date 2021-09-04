@@ -1,10 +1,10 @@
-const projectsData = [
+export const projectsData = [
   {
     title: "Picate",
     image: "/images/projects/picate_logo.png",
     imageAlt: "picate logo",
     content:
-      "Lets you search for photos and save them to your favorites. Uses Unsplash as the source of photos.",
+      "Lets you search for photos and save them to your favorites.",
     tags: ["kotlin", "firebase", "unsplash"],
     links: [
       {
