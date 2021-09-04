@@ -1,0 +1,27 @@
+.header {
+  text-align: center;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.navLinks a {
+  color: #FFCC00;
+  text-decoration: none;
+}
+
+.navLinks a:hover {
+  color: #000000;
+  background-color: #FFCC00;
+}
+
+@media screen and (max-width: 1000px) {
+  .resImg {
+    max-width: 100%;
+    height: auto;
+  }
+}
