@@ -2,10 +2,10 @@ import React from 'react';
 import Image from "next/image";
 import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faLink, faHashtag } from "@fortawesome/free-solid-svg-icons";
 import styles from "../styles/Card.module.css";
 
-export default function Card({ image, imageAlt, title, content, links }) {
+export default function Card({ image, imageAlt, title, content, tags, links }) {
 	return (
 		<div className={styles.card}>
 			<Image
@@ -18,6 +18,9 @@ export default function Card({ image, imageAlt, title, content, links }) {
 			<div className={styles.container}>
 				<h4><b>{title}</b></h4>
 				<p>{content}</p>
+			</div>
+			<div className={styles.tags}>
+				<p><FontAwesomeIcon icon={faHashtag} /> &nbsp;{tags.join(', ')}</p>
 			</div>
 			<div className={styles.action}>
 				{
