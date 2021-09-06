@@ -14,7 +14,7 @@ export default function About() {
         width={100}
       />
       <p>
-        Let me introduce myself. I’m Yalın (<i>name pronunciation: </i>
+        Let me introduce myself. I’m Yalın (<i>Sounds like: </i>
         <audio
           className={styles.audio}
           preload="auto"
@@ -22,17 +22,17 @@ export default function About() {
           src="/name-pronunciation.ogg"
         />
         ). I was born in 1994. I’m a software developer living in Ankara,
-        Turkey. I’m full of wonder and infinitely skeptical toward authority. I
+        Turkey. I’m full of wonder and infinitely skeptical toward authority. I've
         graduated from the department of metallurgy and materials engineering.
-        As a turning point, I can say Paul Graham’s book Hackers and Painters
+        I can say Paul Graham's book Hackers and Painters as the turning point in my life.
         <Link href="http://www.paulgraham.com/hackpaint.html">
           <a target="_blank">*</a>
         </Link>
-        . I developed myself as a software developer with various courses and
-        with enough curiosity. I’ve been programming for about seven years. I
+        . I improved myself as a software developer with the help of various courses and
+        curiosity. I’ve been programming for about seven years. I
         have worked in various freelance jobs. Sometimes it continues. I have
-        been a FSF member since 2015. I contribute to open source projects. I
-        worked at a startup for about a year and I sailed to the new world with
+        been an FSF member since 2015. I contribute to open source projects. I
+        worked at a startup company for about a year and I sailed to the new world with
         the withdrawal of the investor. Then I worked at NYKS Software
         <Link href="https://nykssoft.com/">
           <a target="_blank">*</a>
@@ -42,7 +42,7 @@ export default function About() {
         <Link href="https://www.anayurtteknoloji.com/">
           <a>*</a>
         </Link>{" "}
-        company. In my spare time I’m busy lazing
+        . In my spare time I’m busy lazing
         <span className={styles.tooltip}>
           *
           <span className={styles.tooltiptext}>
