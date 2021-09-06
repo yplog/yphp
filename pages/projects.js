@@ -9,7 +9,7 @@ export default function Projects(props) {
 	return (
 		<div>
 			<h2>
-				Here are some things i did 🤹
+				Here are some projects I develop 🤹
 			</h2>
 			<div className={styles.gridContainer}>
 				{
