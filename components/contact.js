@@ -52,7 +52,7 @@ export default function Contact() {
             <FontAwesomeIcon icon={faMastodon} />
             &nbsp; Mastodon:&nbsp;
             <Link href="https://fosstodon.org/@yp">
-              <a target="_blank">@yp</a>
+              <a rel="me" target="_blank">@yp</a>
             </Link>
           </li>
           <li>
