@@ -8,7 +8,7 @@ export default function About() {
     <section id={"about"} className={styles.about}>
       <h2>Hi, I’m Yalın 👋</h2>
       <Image
-        src="/images/pxArt.png"
+        src="/images/ypxArt.png"
         alt="pixel art Yalın"
         height={100}
         width={100}
@@ -22,18 +22,20 @@ export default function About() {
           src="/name-pronunciation.ogg"
         />
         ). I was born in 1994. I’m a software developer living in Ankara,
-        Turkey. I’m full of wonder and infinitely skeptical toward authority. I've
-        graduated from the department of metallurgy and materials engineering.
-        I can say Paul Graham's book Hackers and Painters as the turning point in my life.
+        Turkey. I’m full of wonder and infinitely skeptical toward authority.
+        I’ve graduated from the department of metallurgy and materials
+        engineering. I can say Paul Graham’s book Hackers and Painters as the
+        turning point in my life.
         <Link href="http://www.paulgraham.com/hackpaint.html">
           <a target="_blank">*</a>
         </Link>
-        . I improved myself as a software developer with the help of various courses and
-        curiosity. I’ve been programming for about seven years. I
+        . I improved myself as a software developer with the help of various
+        courses and curiosity. I’ve been programming for about seven years. I
         have worked in various freelance jobs. Sometimes it continues. I have
         been an FSF member since 2015. I contribute to open source projects. I
-        worked at a startup company for about a year and I sailed to the new world with
-        the withdrawal of the investor. Then I worked at NYKS Software
+        worked at a startup company for about a year and I sailed to the new
+        world with the withdrawal of the investor. Then I worked at NYKS
+        Software
         <Link href="https://nykssoft.com/">
           <a target="_blank">*</a>
         </Link>{" "}
