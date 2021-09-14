@@ -12,3 +12,12 @@
     margin: 10px;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 1000px) {
+    .gridContainer {
+        display: grid;
+        grid-template-columns: auto auto;
+        background-color: black;
+        padding: 10px;
+    }
+}
