@@ -26,15 +26,11 @@ export default function Contact() {
           </li>
           <li>
             <FontAwesomeIcon icon={faEnvelope} />
+            &nbsp; me [at] yalinpala [dot] dev
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faEnvelope} />
             &nbsp; yp [at] riseup [dot] net
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faEnvelope} />
-            &nbsp; yalinpala [at] protonmail [dot] com
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faEnvelope} />
-            &nbsp; yalin.yp [at] gmail [dot] com
           </li>
         </ul>
       </section>
