@@ -40,11 +40,11 @@ export default function About() {
           <a target="_blank">*</a>
         </Link>{" "}
         for about a year. I am currently working as a software developer at
-        Anayurt Teknoloji and I am doing a master’s degree in Engineering Management.
+        Anayurt Teknoloji
         <Link href="https://www.anayurtteknoloji.com/">
-          <a>*</a>
-        </Link>{" "}
-        . In my spare time I’m busy lazing
+          <a target='_blank'>*</a>
+        </Link>{" "} and I am doing a master’s degree in Engineering Management.        
+        In my spare time I’m busy lazing
         <span className={styles.tooltip}>
           *
           <span className={styles.tooltiptext}>
