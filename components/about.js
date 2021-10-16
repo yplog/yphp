@@ -40,7 +40,7 @@ export default function About() {
           <a target="_blank">*</a>
         </Link>{" "}
         for about a year. I am currently working as a software developer at
-        Anayurt Teknoloji
+        Anayurt Teknoloji and I am doing a master’s degree in Engineering Management.
         <Link href="https://www.anayurtteknoloji.com/">
           <a>*</a>
         </Link>{" "}
