@@ -8,7 +8,7 @@ export default function About() {
     <section id={"about"} className={styles.about}>
       <h2>Hi, I’m Yalın 👋</h2>
       <Image
-        src="/images/ypxArt.png"
+        src="/images/pxArt.png"
         alt="pixel art Yalın"
         height={100}
         width={100}
