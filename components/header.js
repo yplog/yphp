@@ -23,6 +23,9 @@ export default function Header() {
         <Link href="/projects">
           <a>Projects</a>
         </Link>
+        <Link href="/experience">
+          <a>Experience</a>
+        </Link>
         <Link href="/#contact">
           <a>Contact</a>
         </Link>
