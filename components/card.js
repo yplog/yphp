@@ -29,7 +29,7 @@ export default function Card({ image, imageAlt, title, content, tags, links }) {
 							<div>
 								<FontAwesomeIcon icon={faLink} /> &nbsp;
 								<Link href={link.url}>
-									<a className={styles.links} target="_blank">{link.text}</a>
+									<a className={styles.links} target="_blank" rel="noreferrer">{link.text}</a>
 								</Link>
 							</div>
 							<br />

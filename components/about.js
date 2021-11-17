@@ -27,7 +27,7 @@ export default function About() {
         engineering. I can say Paul Graham’s book Hackers and Painters as the
         turning point in my life.
         <Link href="http://www.paulgraham.com/hackpaint.html">
-          <a target="_blank">*</a>
+          <a target="_blank" rel="noreferrer">*</a>
         </Link>
         . I improved myself as a software developer with the help of various
         courses and curiosity. I’ve been programming for about seven years. I
@@ -37,12 +37,12 @@ export default function About() {
         world with the withdrawal of the investor. Then I worked at NYKS
         Software
         <Link href="https://nykssoft.com/">
-          <a target="_blank">*</a>
+          <a target="_blank" rel="noreferrer">*</a>
         </Link>{" "}
         for about a year. I am currently working as a software developer at
         Anayurt Teknoloji
         <Link href="https://www.anayurtteknoloji.com/">
-          <a target='_blank'>*</a>
+          <a target='_blank' rel="noreferrer">*</a>
         </Link>{" "} and I am doing a master’s degree in Engineering Management.        
         In my spare time I’m busy lazing
         <span className={styles.tooltip}>
