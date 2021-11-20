@@ -27,30 +27,47 @@ export default function About() {
         engineering. I can say Paul Graham’s book Hackers and Painters as the
         turning point in my life.
         <Link href="http://www.paulgraham.com/hackpaint.html">
-          <a target="_blank" rel="noreferrer">*</a>
+          <a target="_blank" rel="noreferrer">
+            *
+          </a>
         </Link>
         . I improved myself as a software developer with the help of various
-        courses and curiosity. I’ve been programming for about seven years. I
-        have worked in various freelance jobs. Sometimes it continues. I have
-        been an FSF member since 2015. I contribute to open source projects. I
-        worked at a startup company for about a year and I sailed to the new
-        world with the withdrawal of the investor. Then I worked at NYKS
-        Software
+        courses and curiosity. I have worked in various freelance jobs.
+        Sometimes it continues. I have been a member of FSF
+        <Link href="https://www.fsf.org/">
+          <a target="_blank" rel="noreferrer">
+            *
+          </a>
+        </Link>{" "}
+        since 2015 and in the same years I became the founder of Perl Mongers
+        Ankara
+        <Link href="https://www.pm.org/groups/649.html">
+          <a target="_blank" rel="noreferrer">
+            *
+          </a>
+        </Link>
+        . I contribute to open source projects. I worked at a startup company
+        for about a year and I sailed to the new world with the withdrawal of
+        the investor. Then I worked at NYKS Software
         <Link href="https://nykssoft.com/">
-          <a target="_blank" rel="noreferrer">*</a>
+          <a target="_blank" rel="noreferrer">
+            *
+          </a>
         </Link>{" "}
         for about a year. I am currently working as a software developer at
         Anayurt Teknoloji
         <Link href="https://www.anayurtteknoloji.com/">
-          <a target='_blank' rel="noreferrer">*</a>
-        </Link>{" "} and I am doing a master’s degree in Engineering Management.        
-        In my spare time I’m busy lazing
+          <a target="_blank" rel="noreferrer">
+            *
+          </a>
+        </Link>{" "}
+        and I am doing a master’s degree in Engineering Management. In my spare
+        time I’m busy lazing
         <span className={styles.tooltip}>
           *
           <span className={styles.tooltiptext}>
-            Remember: To work is to be impoverished in everyway. <br />
-            Let us be lazy in everything, except in loving and drinking, except
-            in being lazy. <i>-G. E. Lessing</i>
+            Remember: Let us be lazy in everything, except in loving and
+            drinking, except in being lazy. <i>-G. E. Lessing</i>
           </span>
         </span>{" "}
         and developing projects. You can check my geek code for more
@@ -61,14 +78,6 @@ export default function About() {
         GCS d- s-:- a- C+++ UL++&gt;++++ P+(++) L+++&gt;++++ E- W+++ N? o? K? w–
         O— M+ V? PS+++ PE– Y++&gt;+++ PGP++&gt;+++ t B? X R+&gt;+++ !tv
         b++&gt;+++ DI+ D+ G e++&gt;+++ h! r- y+
-      </p>
-      <p>
-        &quot;
-        <i>
-          You may be a turnip, but you&apos;re a good turnip. May you find
-          happiness.
-        </i>
-        &quot;
       </p>
     </section>
   );
