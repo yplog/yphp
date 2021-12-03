@@ -5,6 +5,7 @@ import {
   faKeybase,
   faLinkedin,
   faMastodon,
+  faHackerrank
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -45,6 +46,20 @@ export default function Contact() {
             </Link>
           </li>
           <li>
+            <FontAwesomeIcon icon={faLinkedin} />
+            &nbsp; Linkedin:&nbsp;
+            <Link href="https://www.linkedin.com/in/yal%C4%B1n-pala-2426a3219/">
+              <a target="_blank" rel="noreferrer">@yalınpala</a>
+            </Link>
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faHackerrank} />
+            &nbsp; HackerRank:&nbsp;
+            <Link href="https://www.hackerrank.com/ypala">
+              <a target="_blank" rel="noreferrer">@ypala</a>
+            </Link>
+          </li>
+          <li>
             <FontAwesomeIcon icon={faMastodon} />
             &nbsp; Mastodon:&nbsp;
             <Link href="https://fosstodon.org/@yp">
@@ -58,13 +73,7 @@ export default function Contact() {
               <a target="_blank" rel="noreferrer">@yp</a>
             </Link>
           </li>
-          <li>
-            <FontAwesomeIcon icon={faLinkedin} />
-            &nbsp; Linkedin:&nbsp;
-            <Link href="https://www.linkedin.com/in/yal%C4%B1n-pala-2426a3219/">
-              <a target="_blank" rel="noreferrer">@yalınpala</a>
-            </Link>
-          </li>
+          
         </ul>
       </section>
     </section>
