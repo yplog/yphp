@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
+	
+  <title>Yalın Pala</title>
+
+	<style>
+	body {
+  background: #EEEEEE;
+  font: 13px "Times New Roman", Times, sans-serif;
+  line-height: 1.4;
+  margin: 40px 0;
+}
+em {
+  color: #999;
+}
+p {
+  line-height: 1.4;
+}
+ul {
+  margin-bottom: 0;
+}
+li {
+  margin-bottom: 2px;
+}
+a {
+  text-decoration: none;
+}
+
+#resume {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 80px 100px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px #aaa;
+  -webkit-box-shadow: 2px 2px 4px #aaa;
+}
+
+.coursesList {
+  width: 28%;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.largeFont {
+  font-size: 20px;
+}
+
+.smallFont {
+  font-size: 13px;
+}
+
+.sectionBlock {
+  display: flex;
+  width: 100%;
+}
+
+.sectionName {
+  width: 18%;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.sectionContent {
+  width: 80%;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.sectionContent ul {
+  padding-left: 20px;
+  margin-top: 6px;
+  list-style-type: circle;
+}
+
+.sectionContent .title {
+  font-weight: bold;
+}
+
+.sectionContent .date {
+  float: right;
+}
+
+.sectionContent .separator {
+  height: 14px;
+}
+
+.sectionLine {
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #CFCFCF;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.divider {
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.summary {
+  margin-top: 6px;
+}
+
+.skillBlock {
+  margin-bottom: 4px;
+}
+
+.jobBlock {
+  page-break-inside: avoid;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 40em) {
+  body {
+    margin: 0;
+    font-size: 14px;
+  }
+  #resume {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0.5em 1em;
+    border: none;
+  }
+  .sectionBlock {
+    flex-direction: column;
+  }
+  .sectionContent {
+    width: 100%;
+  }
+  .sectionContent .date {
+    padding-right: 2em;
+  }
+  .sectionName {
+    width: auto;
+  }
+  .largeFont {
+    font-size: 20px;
+  }
+  .smallFont {
+    font-size: 14px;
+  }
+}
+
+@media print {
+  body {
+    background: #FFFFFF;
+  }
+  #resume {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0px 0px;
+    border: 0px;
+    background: #fff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+
+  a {
+    color: black;
+  }
+}
+
+	</style>
+
+	</head>
+	<body>
+
+	<div id='resume'>
+  <div id='nameBlock' class='largeFont'>
+    <span class='name'>
+      Yalın Pala,
+    </span>
+    <span class='label'>Software Developer</span>
+  </div>
+  <div id='basicsBlock' class='smallFont'>
+    <div class='contactBlock'>
+      <span class='email'>yalinpala@protonmail.com</span>
+      <span class='divider'>|</span>
+      <span class='phone'>+90 (542) 523 18 27</span>
+        <span class='divider'>|</span>
+        <span class='address'>
+          Ankara, Turkey
+        </span>
+    </div>
+      <div id='profilesBlock'>
+            <span class='url'>
+              <a href='https://yalinpala.dev'>https://yalinpala.dev</a>
+            </span>
+            <span class='divider'>|</span>
+            <span class='url'>
+              <a href='https://github.com/yplog'>https://github.com/yplog</a>
+            </span>
+            
+      </div>
+  </div>
+  <div class='sectionLine'></div>
+
+  <div id='summaryBlock' class="sectionBlock">
+    <div class='sectionName'>
+      <span>SUMMARY</span>
+    </div>
+    <div class='sectionContent'>
+      <span>Software Developer with hands-on experience designing, developing, and implementing applications and solutions using a range of technologies and programming languages.</span>
+    </div>
+  </div>
+  <div class='sectionLine'></div>
+
+  <div id='workBlock' class="sectionBlock">
+    <div class='sectionName'>
+      <span>EXPERIENCE</span>
+    </div>
+    <div class='sectionContent'>
+			<div class="jobBlock">
+	      <div class='blockHeader'>
+	        <span class='title'>
+	          Anayurt Teknoloji - Software Developer
+	        </span>
+	        <span class='date'>
+	          Apr 2021 &mdash; Present
+	        </span>
+	      </div>
+	      <div><a href='https://www.anayurtteknoloji.com/'>https://www.anayurtteknoloji.com/</a></div>
+	      <ul class='highlights'>
+	        <li>I work as a Backend, Frontend, Mobile and Full Stack developer in various projects.</li>
+	      </ul>
+	      <ul class='details'>
+	        <li>In the Backend, I usually work with Mongodb or Postgresql as a database. Besides, I work with Express and Nest. <em>[TypeScript, Nodejs, Postgresql, MongoDB]</em></li>
+	        <li>In the Frontend, I work with React, Nextjs <em>[Javascript, React, Nextjs]</em></li>
+	        <li>We use Jira and Git for job tracking and Agile methodology. <em>[Jira, Git, Agile, Docker]</em></li>
+	      </ul>
+	      <div class='separator'></div>
+			</div>
+			<div class="jobBlock">
+	      <div class='blockHeader'>
+	        <span class='title'>
+	          NYKS Software - Software Developer
+	        </span>
+	        <span class='date'>
+	          Jan 2020 &mdash; Apr 2021
+	        </span>
+	      </div>
+	      <div><a href='https://nykssoft.com/'>https://nykssoft.com/</a></div>
+	      <ul class='highlights'>
+	        <li>I worked as a Full Stack developer.</li>
+	      </ul>
+	      <ul class='details'>
+	        <li>I used React, React Native and Nodejs extensively in our projects. <em>[React, React Native, Nodejs, Docker]</em></li>
+	      </ul>
+	      <div class='separator'></div>
+			</div>
+			<div class="jobBlock">
+	      <div class='blockHeader'>
+	        <span class='title'>
+	          Freelance - Software Developer
+	        </span>
+	        <span class='date'>
+	          Jan 2019 &mdash; Jan 2020
+	        </span>
+	      </div>
+	      <div><a href=''></a></div>
+	      <ul class='highlights'>
+	        <li>I have worked in a wide variety of projects.</li>
+	      </ul>
+	      <ul class='details'>
+	        <li>Technologies I generally use: <em>[React, React Native, Ruby on Rails, MongoDB, PostgreSQL, Nodejs.]</em></li>
+	      </ul>
+	      
+			</div>
+    </div>
+  </div>
+  <div class='sectionLine'></div>
+
+
+	<div id='awards' class="sectionBlock">
+    <div class='sectionName'>
+      <span>CERTIFICATES</span>
+    </div>
+    <div class='sectionContent'>
+      <div class='blockHeader'>
+        <span class='title'>
+          Information Technologies Certificate, METU
+        </span>
+        <span class='date'>
+          <span class='date'>2018</span>
+        </span>
+      </div>
+      <ul class='highlights'>
+        <li>Computer systems and constructions, Programming with Java, Operating systems, Data structures and algorithms, Database systems, Software Engineering</li>
+      </ul>
+      <div class='separator'></div>
+      <div class='blockHeader'>
+        <span class='title'>
+          Microsoft Certificate Of Achievment, Bilge Adam
+        </span>
+        <span class='date'>
+          <span class='date'>2019</span>
+        </span>
+      </div>
+      <ul class='highlights'>
+        <li>.NET development fundamentals, Programming in C#, SQL Server, ASP.NET Api/MVC, Angular, Cordova</li>
+      </ul>
+      
+    </div>
+	</div>
+  <div class='sectionLine'></div>
+
+
+
+	<div id='education' class="sectionBlock">
+    <div class='sectionName'>
+      <span>EDUCATION</span>
+    </div>
+    <div class='sectionContent'>
+      <div class='educationBlock'>
+        <span class='title'>
+          Marmara University
+        </span>
+        <span class='date'>
+          2021 &mdash; 2023
+        </span>
+        <div class=''>
+          Master&#x27;s Degree  - Engineering/Industrial Management
+        </div>
+      </div>
+      <div class='separator'></div>
+      <div class='educationBlock'>
+        <span class='title'>
+          Bartın University
+        </span>
+        <span class='date'>
+          2011 &mdash; 2018
+        </span>
+        <div class=''>
+          Bachelor of Engineering - BE  - Material Engineering
+        </div>
+      </div>
+      
+    </div>
+	</div>
+  <div class='sectionLine'></div>
+
+
+	<div id='languages' class="sectionBlock">
+    <div class='sectionName'>
+      <span>LANGUAGES</span>
+    </div>
+    <div class='sectionContent'>
+      <span class='language'>English</span>
+      <span class='fluency'><em>(Intermediate, B1)</em></span>
+      <span>,</span>
+      <span class='language'>Turkish</span>
+      <span class='fluency'><em>(Native speaker)</em></span>
+      
+    </div>
+    <div class='sectionLine'></div>
+	</div>
+
+	<div id='interests' class="sectionBlock">
+    <div class='sectionName'>
+      <span>INTERESTS</span>
+    </div>
+    <div class='sectionContent'>
+      <span class='name'>Organizations</span><!--
+      --><span class='keywords'> <em>[
+        Free Software Foundation - Member - Dec 2015<!--
+        -->, 
+        Perl Mongers Ankara - Founder - Jan 2015<!--
+        -->
+      ]</em></span><!--
+      -->
+    </div>
+    <div class='sectionLine'></div>
+	</div>
+
+	</body>
+</html>

@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { faFile } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../styles/About.module.css";
 
 export default function About() {
@@ -74,6 +76,21 @@ export default function About() {
         information. This code was generated with version 3.1. Thanks for your
         time.
       </p>
+      <div>
+
+      <FontAwesomeIcon icon={faFile} />
+        &nbsp;
+        CV:
+        &nbsp;
+        <Link href="/resume.html">
+          <a target="_blank" rel="noreferrer">html</a>
+        </Link>
+        &nbsp;
+        <Link href="/resume.pdf">
+          <a target="_blank" rel="noreferrer">pdf</a>
+        </Link>
+      </div>
+      
       <p>
         GCS d- s-:- a- C+++ UL++&gt;++++ P+(++) L+++&gt;++++ E- W+++ N? o? K? w–
         O— M+ V? PS+++ PE– Y++&gt;+++ PGP++&gt;+++ t B? X R+&gt;+++ !tv
