@@ -82,7 +82,7 @@ export const projectsData = [
       "Our goal is to obtain a piece of code that briefly introduce the author.",
     tags: ["js", "nextjs", "pwa"],
     links: [
-      { text: "urcode.link", url: "https:// urcode.vercel.app/" },
+      { text: "urcode.link", url: "https://urcode.vercel.app/" },
       { text: "Github", url: "https://github.com/3rco/urcode" },
     ],
   },
