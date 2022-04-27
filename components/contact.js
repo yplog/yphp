@@ -59,13 +59,13 @@ export default function Contact() {
               <a target="_blank" rel="noreferrer">@ypala</a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <FontAwesomeIcon icon={faMastodon} />
             &nbsp; Mastodon:&nbsp;
             <Link href="https://fosstodon.org/@yp">
               <a target="_blank" rel="noreferrer">@yp</a>
             </Link>
-          </li>
+          </li> */}
           <li>
             <FontAwesomeIcon icon={faKeybase} />
             &nbsp; Keybase:&nbsp;
