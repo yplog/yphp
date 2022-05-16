@@ -6,6 +6,20 @@ import styles from "../styles/Footer.module.css";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
+      <Image
+        src="/images/262323.png"
+        alt="Free Software Foundation"
+        height={31}
+        width={88}
+        className={styles.resImg}
+      />
+      <Image
+        src="/images/wtfpl-badge-1.png"
+        alt="wtfpl"
+        height={31}
+        width={88}
+        className={styles.resImg}
+      />
       <Link href="https://512kb.club">
         <a target="_blank" rel="noreferrer">
           <Image
@@ -16,20 +30,6 @@ export default function Footer() {
           />
         </a>
       </Link>
-      <Image
-        src="/images/wtfpl-badge-1.png"
-        alt="wtfpl"
-        height={31}
-        width={88}
-        className={styles.resImg}
-      />
-      <Image
-        src="/images/262323.png"
-        alt="The Sandman 1989 Issue 18"
-        height={31}
-        width={88}
-        className={styles.resImg}
-      />
     </footer>
   );
 }
