@@ -8,7 +8,12 @@ export default function Footer() {
     <footer className={styles.footer}>
       <Link href="https://512kb.club">
         <a target="_blank" rel="noreferrer">
-          <img src="https://512kb.club/assets/images/blue-team.svg" />
+          <Image
+            height={31}
+            width={88}
+            alt="512kb.club"
+            src="https://512kb.club/assets/images/blue-team.svg"
+          />
         </a>
       </Link>
       <Image
