@@ -1,5 +1,24 @@
 export const projectsData = [
   {
+    title: "Kutimo",
+    image: "/images/projects/kutimo.png",
+    imageAlt: "kutimo logo",
+    content:
+      "A note and color every day. Track your past. See what kind of map you'll end up with.",
+    tags: ["flutter"],
+    links: [
+      {
+        text: "Web",
+        url: "/kutimo/index.html"
+      },
+      {
+        text: "Google Play",
+        url: "https://play.google.com/store/apps/details?id=com.kutimo.kutimo",
+      },
+      { text: "Github", url: "https://github.com/yplog/kutimo" },
+    ],
+  },
+  {
     title: "Picate",
     image: "/images/projects/picate_logo.png",
     imageAlt: "picate logo",
