@@ -12,6 +12,10 @@ export const projectsData = [
         url: "/kutimo/index.html"
       },
       {
+        text: "Snapcraft",
+        url: "https://snapcraft.io/kutimo"
+      },
+      {
         text: "Google Play",
         url: "https://play.google.com/store/apps/details?id=com.kutimo.kutimo",
       },
