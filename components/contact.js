@@ -4,7 +4,6 @@ import {
   faGithub,
   faKeybase,
   faLinkedin,
-  faMastodon,
   faHackerrank
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
@@ -57,13 +56,6 @@ export default function Contact() {
             &nbsp; HackerRank:&nbsp;
             <Link href="https://www.hackerrank.com/ypala">
               <a target="_blank" rel="noreferrer">@ypala</a>
-            </Link>
-          </li>
-          <li>
-            <FontAwesomeIcon icon={faMastodon} />
-            &nbsp; Mastodon:&nbsp;
-            <Link href="https://kolektiva.social/@yp">
-              <a target="_blank" rel="me" >@yp</a>
             </Link>
           </li>
           <li>
