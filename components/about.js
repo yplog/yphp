@@ -77,20 +77,21 @@ export default function About() {
         time.
       </p>
       <div>
-
-      <FontAwesomeIcon icon={faFile} />
-        &nbsp;
-        CV:
-        &nbsp;
+        <FontAwesomeIcon icon={faFile} />
+        &nbsp; CV: &nbsp;
         <Link href="/resume.html">
-          <a target="_blank" rel="noreferrer">html</a>
+          <a target="_blank" rel="noreferrer">
+            html
+          </a>
         </Link>
         &nbsp;
         <Link href="/resume.pdf">
-          <a target="_blank" rel="noreferrer">pdf</a>
+          <a target="_blank" rel="noreferrer">
+            pdf
+          </a>
         </Link>
       </div>
-      
+
       <p>
         GCS d- s-:- a- C+++ UL++&gt;++++ P+(++) L+++&gt;++++ E- W+++ N? o? K? w–
         O— M+ V? PS+++ PE– Y++&gt;+++ PGP++&gt;+++ t B? X R+&gt;+++ !tv
