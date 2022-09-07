@@ -5,11 +5,11 @@ export const projectsData = [
     imageAlt: "libromarko logo",
     content:
       "Freedom for bookmarks. Access your bookmarks from browser, mobile, anywhere.",
-    tags: ["react, typescript, postgres"],
+    tags: ["react, typescript, postgres, browser extension"],
     links: [
       {
         text: "Web",
-        url: "https://libromarko.xyz"
+        url: "https://libromarko.xyz",
       },
       { text: "Github", url: "https://github.com/libromarko" },
     ],
@@ -24,11 +24,11 @@ export const projectsData = [
     links: [
       {
         text: "Web",
-        url: "/kutimo/index.html"
+        url: "/kutimo/index.html",
       },
       {
         text: "Snapcraft",
-        url: "https://snapcraft.io/kutimo"
+        url: "https://snapcraft.io/kutimo",
       },
       {
         text: "Google Play",
@@ -41,8 +41,7 @@ export const projectsData = [
     title: "Picate",
     image: "/images/projects/picate_logo.png",
     imageAlt: "picate logo",
-    content:
-      "Lets you search for photos and save them to your favorites.",
+    content: "Lets you search for photos and save them to your favorites.",
     tags: ["kotlin", "firebase", "unsplash"],
     links: [
       {
