@@ -1,5 +1,20 @@
 export const projectsData = [
   {
+    title: "libromarko",
+    image: "/images/projects/libromarko.png",
+    imageAlt: "libromarko logo",
+    content:
+      "Freedom for bookmarks. Access your bookmarks from browser, mobile, anywhere.",
+    tags: ["react, typescript, postgres"],
+    links: [
+      {
+        text: "Web",
+        url: "https://libromarko.xyz"
+      },
+      { text: "Github", url: "https://github.com/libromarko" },
+    ],
+  },
+  {
     title: "Kutimo",
     image: "/images/projects/kutimo.png",
     imageAlt: "kutimo logo",
