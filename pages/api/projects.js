@@ -11,6 +11,10 @@ export const projectsData = [
         text: "Web",
         url: "https://libromarko.xyz",
       },
+      {
+        text: "Firefox Add-on",
+        url: "https://addons.mozilla.org/en-US/firefox/addon/libromarko/",
+      },
       { text: "Github", url: "https://github.com/libromarko" },
     ],
   },
