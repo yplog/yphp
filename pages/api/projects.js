@@ -15,6 +15,10 @@ export const projectsData = [
         text: "Firefox Add-on",
         url: "https://addons.mozilla.org/en-US/firefox/addon/libromarko/",
       },
+      {
+        text: "Chrome Extension",
+        url: "https://chrome.google.com/webstore/detail/libromarko/jpbjepefiibjgekgaloekkfbjciigcfg",
+      },
       { text: "Github", url: "https://github.com/libromarko" },
     ],
   },
