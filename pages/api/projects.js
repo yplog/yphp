@@ -12,6 +12,14 @@ export const projectsData = [
         url: "https://libromarko.xyz",
       },
       {
+        text: "Docs",
+        url: "https://doc.libromarko.xyz",
+      },
+      {
+        text: "Google Play",
+        url: "https://play.google.com/store/apps/details?id=xyz.libromarko.app",
+      },
+      {
         text: "Firefox Add-on",
         url: "https://addons.mozilla.org/en-US/firefox/addon/libromarko/",
       },
