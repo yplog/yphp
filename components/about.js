@@ -16,26 +16,15 @@ export default function About() {
         width={100}
       />
       <p>
-        Let me introduce myself. I’m Yalın (<i>Sounds like: </i>
+        I’m Yalın (<i>Sounds like: </i>
         <audio
           className={styles.audio}
           preload="auto"
           controls="controls"
           src="/name-pronunciation.ogg"
         />
-        ). I was born in 1994. I’m a software developer living in Ankara,
-        Turkey. I’m full of wonder and infinitely skeptical toward authority.
-        I’ve graduated from the department of metallurgy and materials
-        engineering. I can say Paul Graham’s book Hackers and Painters as the
-        turning point in my life.
-        <Link href="http://www.paulgraham.com/hackpaint.html">
-          <a target="_blank" rel="noreferrer">
-            *
-          </a>
-        </Link>
-        . I improved myself as a software developer with the help of various
-        courses and curiosity. I have worked in various freelance jobs.
-        Sometimes it continues. I have been a member of FSF
+        ). I improved myself with the help of various courses and curiosity. I
+        have worked in various freelance jobs. I have been a member of FSF
         <Link href="https://www.fsf.org/">
           <a target="_blank" rel="noreferrer">
             *
@@ -48,33 +37,15 @@ export default function About() {
             *
           </a>
         </Link>
-        . I contribute to open source projects. I worked at a startup company
-        for about a year and I sailed to the new world with the withdrawal of
-        the investor. Then I worked at NYKS Software
-        <Link href="https://nykssoft.com/">
-          <a target="_blank" rel="noreferrer">
-            *
-          </a>
-        </Link>{" "}
-        for about a year. I am currently working as a software developer at
-        Anayurt Teknoloji
+        . I develop and contribute to open source projects. I am currently
+        working as a software developer at Anayurt Teknoloji
         <Link href="https://www.anayurtteknoloji.com/">
           <a target="_blank" rel="noreferrer">
             *
           </a>
         </Link>{" "}
-        and I am doing a master’s degree in Engineering Management. In my spare
-        time I’m busy lazing
-        <span className={styles.tooltip}>
-          *
-          <span className={styles.tooltiptext}>
-            Remember: Let us be lazy in everything, except in loving and
-            drinking, except in being lazy. <i>-G. E. Lessing</i>
-          </span>
-        </span>{" "}
-        and developing projects. You can check my geek code for more
-        information. This code was generated with version 3.1. Thanks for your
-        time.
+        You can check my geek code for more information. This code was generated
+        with version 3.1. Thanks for your time.
       </p>
       <div>
         <FontAwesomeIcon icon={faFile} />
