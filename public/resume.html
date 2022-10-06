@@ -1,16 +1,15 @@
 <!doctype html>
 <html>
 	<head>
-
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
-
-	<title>Yalın Pala</title>
+	
+  <title>Yalın Pala</title>
 
 	<style>
 	body {
   background: #EEEEEE;
-  font: 12px "Times New Roman", Times, sans-serif;
+  font: 13px "Times New Roman", Times, sans-serif;
   line-height: 1.4;
   margin: 40px 0;
 }
@@ -51,7 +50,7 @@ a {
 }
 
 .smallFont {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .sectionBlock {
@@ -127,6 +126,9 @@ a {
     padding: 0.5em 1em;
     border: none;
   }
+  .sectionBlock {
+    flex-direction: column;
+  }
   .sectionContent {
     width: 100%;
   }
@@ -145,6 +147,9 @@ a {
 }
 
 @media print {
+  body {
+    background: #FFFFFF;
+  }
   #resume {
     margin: 0 auto;
     max-width: 600px;
@@ -184,11 +189,15 @@ a {
     </div>
       <div id='profilesBlock'>
             <span class='url'>
-              <a href='https://yalinpala.dev'>https://yalinpala.dev</a>
+              <a href='https://yalinpala.dev'>https://yalinpala.dev</a> 
             </span>
             <span class='divider'>|</span>
             <span class='url'>
-              <a href='https://github.com/yplog'>https://github.com/yplog</a>
+              <a href='https://github.com/yplog'>Github</a> yplog
+            </span>
+            <span class='divider'>|</span>
+            <span class='url'>
+              <a href='https://www.linkedin.com/in/yal%C4%B1n-pala-2426a3219/'>Linkedin</a> Yalın Pala
             </span>
             
       </div>
@@ -213,7 +222,7 @@ a {
 			<div class="jobBlock">
 	      <div class='blockHeader'>
 	        <span class='title'>
-	          Anayurt Teknoloji, Software Developer
+	          Anayurt Teknoloji - Software Developer
 	        </span>
 	        <span class='date'>
 	          2021 &mdash; Present
@@ -235,7 +244,7 @@ a {
 			<div class="jobBlock">
 	      <div class='blockHeader'>
 	        <span class='title'>
-	          NYKS Software, Software Developer
+	          NYKS Software - Software Developer
 	        </span>
 	        <span class='date'>
 	          2020 &mdash; 2021
@@ -249,28 +258,45 @@ a {
 	        <li>I worked as a Full Stack developer.</li>
 	        <li>I used React, React Native and Nodejs extensively in our projects.  <em>[React, React Native, Docker, Nodejs]</em></li>
 	      </ul>
-	      <div class='separator'></div>
-			</div>
-			<div class="jobBlock">
-	      <div class='blockHeader'>
-	        <span class='title'>
-	          Freelance, Software Developer
-	        </span>
-	        <span class='date'>
-	          2019 &mdash; 2020
-	        </span>
-	      </div>
-	      <div><a href='https://nykssoft.com'>https://nykssoft.com</a></div>
-	      <ul class='details'>
-	        <li>I have worked in a wide variety of projects.</li>
-	        <li>I generally use <em>[React, React Native, Ruby on Rails, PostgreSQL, Nodejs, MongoDB, Docker, Nodejs]</em></li>
-	      </ul>
 	      
 			</div>
     </div>
   </div>
   <div class='sectionLine'></div>
 
+
+	<div id='awards' class="sectionBlock">
+    <div class='sectionName'>
+      <span>CERTIFICATES</span>
+    </div>
+    <div class='sectionContent'>
+      <div class='blockHeader'>
+        <span class='title'>
+          Information Technologies Certificate, METU
+        </span>
+        <span class='date'>
+          <span class='date'>2019</span>
+        </span>
+      </div>
+      <ul class='highlights'>
+        <li>Computer systems and constructions, Programming with Java, Operating systems, Data structures and algorithms, Database systems, Software Engineering</li>
+      </ul>
+      <div class='separator'></div>
+      <div class='blockHeader'>
+        <span class='title'>
+          Microsoft Certificate Of Achievment, Bilge Adam
+        </span>
+        <span class='date'>
+          <span class='date'>2018</span>
+        </span>
+      </div>
+      <ul class='highlights'>
+        <li>.NET development fundamentals, Programming in C#, SQL Server, ASP.NET Api/MVC, Angular, Cordova</li>
+      </ul>
+      
+    </div>
+	</div>
+  <div class='sectionLine'></div>
 
 
 
@@ -288,58 +314,6 @@ a {
         </span>
         <div class=''>
           Master&#x27;s Degree  - Engineering/Industrial Management 
-        </div>
-      </div>
-      <div class='separator'></div>
-      <div class='educationBlock'>
-        <span class='title'>
-          Middle East Technical University 
-        </span>
-        <span class='date'>
-          2019 &mdash; 2019
-        </span>
-        <div class=''>
-          Certificate   - Information Technologies Certificate 
-        </div>
-        <div id='coursesBlock'>
-          <ul class='coursesList'>
-            <li class='course'>Computer systems and constructions</li>
-            <li class='course'>Data structures and algorithms</li>
-          </ul>
-          <ul class='coursesList'>
-            <li class='course'>Programming with Java</li>
-            <li class='course'>Database systems</li>
-          </ul>
-          <ul class='coursesList'>
-            <li class='course'>Operating systems</li>
-            <li class='course'>Software Engineering</li>
-          </ul>
-        </div>
-      </div>
-      <div class='separator'></div>
-      <div class='educationBlock'>
-        <span class='title'>
-          Bilge Adam
-        </span>
-        <span class='date'>
-          2018 &mdash; 2018
-        </span>
-        <div class=''>
-          Certificate   - Microsoft Certificate Of Achievment 
-        </div>
-        <div id='coursesBlock'>
-          <ul class='coursesList'>
-            <li class='course'>.NET development fundamentals</li>
-            <li class='course'>ASP.NET Api/MVC</li>
-          </ul>
-          <ul class='coursesList'>
-            <li class='course'>Programming in C#</li>
-            <li class='course'>Angular</li>
-          </ul>
-          <ul class='coursesList'>
-            <li class='course'>SQL Server</li>
-            <li class='course'>Cordova</li>
-          </ul>
         </div>
       </div>
       <div class='separator'></div>
