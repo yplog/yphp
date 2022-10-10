@@ -2,12 +2,11 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
-import Image from "next/image";
 
 const Blog = ({ posts }) => {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <h1 style={{ textAlign: "center" }}>Blog Posts ✍</h1>
+      <h1 style={{ textAlign: "center" }}>Blog Posts ✍️</h1>
       <ul style={{ listStyleType: "circle" }}>
         {posts.map((post, index) => (
           <li key={index}>
