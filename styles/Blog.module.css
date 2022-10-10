@@ -1,0 +1,36 @@
+.blog {
+  margin: 30px;
+}
+
+.blog > h1 {
+  text-decoration: underline;
+  text-decoration-color: #ffcc00;
+  text-align: left;
+}
+
+.blog > h2 {
+  text-decoration: underline;
+  text-decoration-color: #ffcc00;
+  text-align: left;
+}
+
+.blog > h3 {
+  text-decoration: underline;
+  text-decoration-color: #ffcc00;
+  text-align: left;
+}
+
+.blog > a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.blog > a:hover {
+  color: #000000;
+  background-color: #ffcc00;
+}
+
+.blog > hr {
+  border: 1px dashed #ffcc00;
+  margin-top: 10px;
+}

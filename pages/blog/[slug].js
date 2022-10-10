@@ -1,25 +1,34 @@
+import Image from "next/image";
+import Link from "next/link";
 import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import SyntaxHighlighter from "react-syntax-highlighter";
-import Image from "next/image";
+import styles from "../../styles/Blog.module.css";
 
 const components = { SyntaxHighlighter, Image };
 
-const BlogPage = ({ frontMatter: { title, date, tags }, mdxSource }) => {
+const BlogPage = ({ frontMatter: { title, date }, mdxSource }) => {
   return (
-    <>
-      <hr />
-      <div style={{ margin: 30 }}>
-        <h2 style={{ textAlign: "center" }}>{title}</h2>
-        <i style={{ textAlign: "right" }}>
+    <div>
+      <div className={styles.blog}>
+        <hr />
+        <h2>{title}</h2>
+        <i>
           <p>{date}</p>
         </i>
-        <MDXRemote {...mdxSource} components={components} tags={tags} />
+        <MDXRemote {...mdxSource} components={components} />
+        <hr />
       </div>
-    </>
+
+      <div style={{ marginTop: 10, marginBottom: 20, textAlign: "center" }}>
+        <Link href="/blog">
+          <a>{"<< All Posts"}</a>
+        </Link>
+      </div>
+    </div>
   );
 };
 

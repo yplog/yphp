@@ -5,7 +5,9 @@ import Link from "next/link";
 
 const Blog = ({ posts }) => {
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div
+      style={{ display: "flex", flexDirection: "column", minHeight: "50vh" }}
+    >
       <h1 style={{ textAlign: "center" }}>Blog Posts ✍️</h1>
       <ul style={{ listStyleType: "circle" }}>
         {posts.map((post, index) => (

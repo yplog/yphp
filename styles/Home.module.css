@@ -21,6 +21,12 @@
   text-align: center;
 }
 
+.content h1 {
+  text-decoration: underline;
+  text-decoration-color: #FFCC00;
+  text-align: center;
+}
+
 .content ul {
   list-style: none;
 }
