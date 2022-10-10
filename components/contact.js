@@ -13,7 +13,7 @@ import styles from "../styles/Contact.module.css";
 
 export default function Contact() {
   return (
-    <section id={"contact"} className={styles.contactSection}>
+    <section className={styles.contactSection}>
       <section>
         <h2>Say Hello</h2>
         <ul>

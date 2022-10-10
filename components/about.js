@@ -7,7 +7,7 @@ import styles from "../styles/About.module.css";
 
 export default function About() {
   return (
-    <section id={"about"} className={styles.about}>
+    <section className={styles.about}>
       <h2>Hi, I’m Yalın 👋</h2>
       <Image
         src="/images/pxArt.png"
