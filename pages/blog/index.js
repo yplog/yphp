@@ -4,7 +4,6 @@ import matter from "gray-matter";
 import Link from "next/link";
 
 const Blog = ({ posts }) => {
-  console.log(posts)
   return (
     <div
       style={{ display: "flex", flexDirection: "column", minHeight: "50vh" }}
