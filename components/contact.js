@@ -29,6 +29,10 @@ export default function Contact() {
           </li>
           <li>
             <FontAwesomeIcon icon={faEnvelope} />
+            &nbsp; yalinpala [at] proton [dot] me
+          </li>
+          <li>
+            <FontAwesomeIcon icon={faEnvelope} />
             &nbsp; me [at] yalinpala [dot] dev
           </li>
           <li>
