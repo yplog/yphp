@@ -23,9 +23,9 @@ export default function Header() {
         <Link href="/experience">
           <a>Experience</a>
         </Link>
-        <Link href="/blog">
+        {/* <Link href="/blog">
           <a>Blog</a>
-        </Link>
+        </Link> */}
       </nav>
     </header>
   );
