@@ -1,90 +1,79 @@
-/* (A) "SET" THE TIMELINE CONTAINER */
 .vtl {
-    /* (A1) RELATIVE POSITION NECESSARY TO PROPERLY POSITION TIMELINE LATER */
-    position: relative;
-    /* (A2) RESERVE MORE SPACE TO THE LEFT FOR THE TIMELINE */
-    padding: 10px 10px 10px 50px;
-    /* (A3) OPTIONAL WIDTH RESTRICTION */
-    max-width: 400px;
-  }
-  
-  /* (B) DRAW TIMELINE USING ::BEFORE */
-  .vtl::before {
-    /* (B1) DRAW THE TIMELINE */
-    content: '';
-    width: 5px;
-    background-color: #FFCC00;
-    /* (B2) POSITION IT TO THE LEFT */
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 15px;
-  }
-  
-  .exsection {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+  position: relative;
+  padding: 10px 10px 10px 50px;
+  max-width: 400px;
+}
 
-  /* (C) STYLES FOR THE EVENTS */
-  div.event {
-    padding: 20px 30px;
-    background-color: #fbdfc0;
-    position: relative;
-    border-radius: 6px;
-    margin-bottom: 10px;
-  }
+.vtl::before {
+  content: "";
+  width: 5px;
+  background-color: #ffcc00;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+}
 
-  .eventHeader {
-      display: flex;
-      justify-content: space-between;
-  }
-  
-  /* (D) STYLES FOR THE DATE & TEXT */
-  .etitle {
-    font-size: 1.1em;
-    font-weight: bold;
-    color: black;
-  }
+.exsection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 
-  .edate {
-    font-size: 1.1em;
-    font-style: italic;
-    color: #161616;
-  }
+div.event {
+  padding: 20px 30px;
+  background-color: #fbdfc0;
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
 
-  p.etxt {
-    margin: 10px 0 0 0;
-    color: black;
-  }
+.eventHeader {
+  display: flex;
+  justify-content: space-between;
+}
 
-  p.etags {
-    margin: 10px 0 0 0;
-    color: gray;
-    font-style: italic;
-  }
-  
-  /* (E) ADD "SPEECH BUBBLE TRIANGLE" TO THE EVENTS */
-  div.event::before {
-    content: '';
-    border: 10px solid transparent;
-    border-right-color: #fbdfc0;
-    border-left: 0;
-    position: absolute;
-    top: 20%;
-    left: -10px;
-  }
-  
-  /* (F) ADD A CIRCLE ON THE TIMELINE TO INDICATE AN EVENT */
-  div.event::after {
-    content: '';
-    background: #fff;
-    border: 4px solid #fcd188;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    position: absolute;
-    top: 20%;
-    left: -44px;
-  }
+.etitle {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: black;
+}
+
+.edate {
+  font-size: 1.1em;
+  font-style: italic;
+  color: #161616;
+}
+
+p.etxt {
+  margin: 10px 0 0 0;
+  color: black;
+}
+
+p.etags {
+  margin: 10px 0 0 0;
+  color: gray;
+  font-style: italic;
+}
+
+div.event::before {
+  content: "";
+  border: 10px solid transparent;
+  border-right-color: #fbdfc0;
+  border-left: 0;
+  position: absolute;
+  top: 20%;
+  left: -10px;
+}
+
+div.event::after {
+  content: "";
+  background: #fff;
+  border: 4px solid #fcd188;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: -44px;
+}
