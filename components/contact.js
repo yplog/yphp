@@ -88,7 +88,7 @@ export default function Contact() {
             </Link>
           </li>
           <li>
-            <Image src="/images/codewars_icon.svg" height={16} width={16} />
+            <Image alt="codewars" src="/images/codewars_icon.svg" height={16} width={16} />
             &nbsp; Codewars:&nbsp;
             <Link href="https://www.codewars.com/users/yplog">
               <a target="_blank" rel="noreferrer">
