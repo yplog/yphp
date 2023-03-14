@@ -1,11 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   faGithub,
   faKeybase,
   faLinkedin,
   faHackerrank,
-  faMastodon
+  faMastodon,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -83,6 +84,15 @@ export default function Contact() {
             <Link href="https://www.hackerrank.com/ypala">
               <a target="_blank" rel="noreferrer">
                 @ypala
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Image src="/images/codewars_icon.svg" height={16} width={16} />
+            &nbsp; Codewars:&nbsp;
+            <Link href="https://www.codewars.com/users/yplog">
+              <a target="_blank" rel="noreferrer">
+                @yplog
               </a>
             </Link>
           </li>
