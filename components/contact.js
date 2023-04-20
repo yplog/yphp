@@ -24,7 +24,7 @@ export default function Contact() {
             &nbsp;
             <Link href="/yps-public-key.txt">
               <a target="_blank" rel="noreferrer">
-                E0AB D12B B3DE FCE5
+                459846E28C0A2077
               </a>
             </Link>
           </li>
@@ -88,7 +88,12 @@ export default function Contact() {
             </Link>
           </li>
           <li>
-            <Image alt="codewars" src="/images/codewars_icon.svg" height={16} width={16} />
+            <Image
+              alt="codewars"
+              src="/images/codewars_icon.svg"
+              height={16}
+              width={16}
+            />
             &nbsp; Codewars:&nbsp;
             <Link href="https://www.codewars.com/users/yplog">
               <a target="_blank" rel="noreferrer">
