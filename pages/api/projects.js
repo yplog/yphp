@@ -1,5 +1,24 @@
 export const projectsData = [
   {
+    title: "jourst",
+    image: "/images/projects/jourst.png",
+    imageAlt: "jourst logo",
+    content:
+      "This is a simple command line-based to do management application.",
+    tags: ["rust", "cli"],
+    links: [
+      {
+        text: "Docker",
+        url: "https://hub.docker.com/r/yalinpala/jourst",
+      },
+      {
+        text: "Crate",
+        url: "https://crates.io/crates/jourst",
+      }, 
+      { text: "Github", url: "https://github.com/yplog/jourst" },
+    ],
+  }, 
+  {
     title: "libromarko",
     image: "/images/projects/libromarko.png",
     imageAlt: "libromarko logo",
