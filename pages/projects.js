@@ -12,6 +12,7 @@ export default function Projects(props) {
         {props.data.projects.map((project, i) => (
           <div key={i} className={styles.gridItem}>
             <Card
+              status={project.status}
               image={project.image}
               imageAlt={project.imageAlt}
               title={project.title}

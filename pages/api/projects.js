@@ -1,5 +1,6 @@
 export const projectsData = [
   {
+    status: true,
     title: "jourst",
     image: "/images/projects/jourst.png",
     imageAlt: "jourst logo",
@@ -19,6 +20,7 @@ export const projectsData = [
     ],
   }, 
   {
+    status: false,
     title: "libromarko",
     image: "/images/projects/libromarko.png",
     imageAlt: "libromarko logo",
@@ -50,6 +52,7 @@ export const projectsData = [
     ],
   },
   {
+    status: true,
     title: "Kutimo",
     image: "/images/projects/kutimo.png",
     imageAlt: "kutimo logo",
@@ -73,6 +76,7 @@ export const projectsData = [
     ],
   },
   {
+    status: false,
     title: "Picate",
     image: "/images/projects/picate_logo.png",
     imageAlt: "picate logo",
@@ -87,6 +91,7 @@ export const projectsData = [
     ],
   },
   {
+    status: true,
     image: "/images/projects/niminy_logo.png",
     imageAlt: "niminy logo",
     title: "niminy",
@@ -102,6 +107,7 @@ export const projectsData = [
     ],
   },
   {
+    status: false,
     title: "rd-dd",
     content:
       "This script compares the files in the PostgreSQL database with the file assets in the directory. Deletes files that are not in the database.",
@@ -109,6 +115,7 @@ export const projectsData = [
     links: [{ text: "Github", url: "https://github.com/yplog/rd-dd" }],
   },
   {
+    status: false,
     image: "/images/projects/tasko_logo.png",
     imageAlt: "tasko logo",
     title: "Tasko",
@@ -120,6 +127,7 @@ export const projectsData = [
     ],
   },
   {
+    status: false,
     title: "EFF Dice-Generated Passphrases",
     image: "/images/projects/eff_dice_logo.png",
     imageAlt: "eff dice logo",
@@ -135,6 +143,7 @@ export const projectsData = [
     ],
   },
   {
+    status: true,
     image: "/images/projects/camelia_logo.png",
     imageAlt: "camelia logo",
     title: "Raku Guide",
@@ -147,6 +156,7 @@ export const projectsData = [
     ],
   },
   {
+    status: false,
     image: "/images/projects/urcode_logo.png",
     imageAlt: "urcode logo",
     title: "urcode",
