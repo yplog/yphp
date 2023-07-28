@@ -1,5 +1,10 @@
 ---
-import "@fontsource/roboto";
+import '@fontsource/roboto/100.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import '@fontsource/roboto/900.css';
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -50,6 +55,7 @@ const { title } = Astro.props;
   .main {
     grid-area: main;
     width: 90%;
+    min-height: 50vh;
     margin: 0 auto;
   }
 
@@ -62,7 +68,7 @@ const { title } = Astro.props;
     border: 1px;
     border-radius: 5px;
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     background-color: #18181b;
     display: grid;
     grid-template-columns: auto;
