@@ -1,6 +1,18 @@
 ---
+const year = new Date().getFullYear();
 ---
 
-<footer>footer</footer>
+<section class="footer-area">
+    <p>2020 - {year}</p>
+    <p>footer 2</p>
+    <p>footer 3</p>
+</section>
 
-<style></style>
+<style>
+    .footer-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+</style>
