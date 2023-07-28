@@ -1,18 +1,56 @@
 ---
+import { Image } from "astro:assets";
+import Break from "./Break.astro";
+import headerImage from "../assets/The-Sandman-1989_Issue-18-17.png";
 ---
 
-<section>
+<main>
+  <Image
+    class="header-image"
+    src={headerImage}
+    alt="The Sandman 1989 Issue 18 Page 17"
+  />
+
   <nav class="navigation">
     <a href="/">Home</a>
     <a href="/about/">About</a>
+    <a href="/projects/">Projects</a>
   </nav>
-</section>
+
+  <Break />
+</main>
 
 <style>
-    .navigation {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
+  .header-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: grayscale(50%);
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .navigation a {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #f4f4f5;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .navigation a:hover {
+    background-color: #e6bf00;
+    color: #18181b;
+  }
+
+  .navigation a:active {
+    background-color: #c0a800;
+    color: #18181b;
+  }
 </style>

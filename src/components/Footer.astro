@@ -1,18 +1,22 @@
 ---
+import Break from "./Break.astro";
 const year = new Date().getFullYear();
 ---
 
-<section class="footer-area">
+<main>
+  <Break />
+  <section class="footer-area">
     <p>2020 - {year}</p>
     <p>footer 2</p>
     <p>footer 3</p>
-</section>
+  </section>
+</main>
 
 <style>
-    .footer-area {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
+  .footer-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 </style>
