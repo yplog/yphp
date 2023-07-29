@@ -1,8 +1,11 @@
 ---
 import { Image } from "astro:assets";
+
 import Divider from "./Divider.astro";
+
 import indexImage from "../assets/The-Sandman-1989_Issue-18-17.png";
-import projectsImage from "../assets/23rd-Century-Dreamers.png";
+import projectsImage from "../assets/dune-2.jpg";
+import aboutImage from "../assets/dune.jpg";
 
 const { page } = Astro.props;
 
@@ -14,8 +17,13 @@ const images = [
   },
   {
     src: projectsImage,
-    alt: "23rd Century Dreamers",
+    alt: "Dune",
     page: "projects",
+  },
+  {
+    src: aboutImage,
+    alt: "Dune",
+    page: "about",
   },
 ];
 
