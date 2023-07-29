@@ -3,12 +3,14 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="yp's home page">
-  <p class="title">Software Developer, FOSS enthusias.</p>
+  <p class="hi">
+    Hi, I'm Yalın. <br />
+    <span class="title">Software Developer, FOSS enthusias.</span>
+  </p>
   <p class="summary">
-    I'm Yalın, a software developer based in Ankara. My passion lies in
-    contributing to and developing open source projects. Currently, I work as a
-    software developer at Netta Tech, where I continue to explore and innovate
-    in the tech industry.
+    My passion lies in contributing to and developing open source projects. I’m
+    interested in building accessible, maintainable, distributed systems.
+    Currently, I work as a software developer at Netta Tech.
   </p>
 
   <section class="social">
@@ -72,16 +74,23 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-  .title {
+  .hi {
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #f4f4f5;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #aaaaaa;
   }
 
   .summary {
     font-size: 1.5rem;
-    font-weight: 300;
-    color: #aaaaaa;
+    font-weight: 400;
+    color: #f4f4f5;
+    width: 70%;
   }
 
   .social {
@@ -103,5 +112,11 @@ import Layout from "../layouts/Layout.astro";
 
   .social svg:hover {
     fill: #f4f4f5;
+  }
+
+  @media screen and (max-width: 768px) {
+    .summary {
+      width: 100%;
+    }
   }
 </style>
