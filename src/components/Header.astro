@@ -1,14 +1,32 @@
 ---
 import { Image } from "astro:assets";
 import Divider from "./Divider.astro";
-import headerImage from "../assets/The-Sandman-1989_Issue-18-17.png";
+import indexImage from "../assets/The-Sandman-1989_Issue-18-17.png";
+import projectsImage from "../assets/23rd-Century-Dreamers.png";
+
+const { page } = Astro.props;
+
+const images = [
+  {
+    src: indexImage,
+    alt: "The Sandman 1989 Issue 18 Page 17",
+    page: "index",
+  },
+  {
+    src: projectsImage,
+    alt: "23rd Century Dreamers",
+    page: "projects",
+  },
+];
+
+const image = images.find((image) => image.page === page) || images[0];
 ---
 
 <main>
   <Image
     class="header-image"
-    src={headerImage}
-    alt="The Sandman 1989 Issue 18 Page 17"
+    src={image.src}
+    alt={image.alt}
   />
 
   <nav class="navigation">
@@ -18,6 +36,7 @@ import headerImage from "../assets/The-Sandman-1989_Issue-18-17.png";
   </nav>
 
   <Divider />
+
 </main>
 
 <style>
