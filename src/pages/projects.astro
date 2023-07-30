@@ -1,10 +1,156 @@
 ---
+import ProjectCard from "../components/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
+
+const projects = [
+  {
+    title: "jourst",
+    description:
+      "This is a simple command line-based to do management application.",
+    link: { name: "Github", url: "https://github.com/yplog/jourst" },
+    tags: ["rust", "cli"],
+    image:
+      "https://camo.githubusercontent.com/f27d3b798e7f13c658da20a3b8a29b7fd44c19dbc275b67beb18176c32d95d6a/68747470733a2f2f692e696d6775722e636f6d2f466852537a6a4c2e706e67",
+    isArchived: false,
+  },
+  {
+    title: "libromarko",
+    description:
+      "Freedom for bookmarks. Access your bookmarks from browser, mobile, anywhere.",
+    link: { name: "Github", url: "https://github.com/libromarko" },
+    tags: ["react", "typescript", "postgresql", "browser extension"],
+    image: "https://avatars.githubusercontent.com/u/109948930?s=200&v=4",
+    isArchived: true,
+  },
+  {
+    title: "Kutimo",
+    description:
+      "A note and color every day. Track your past. See what kind of map you'll end up with.",
+    link: { name: "Github", url: "https://github.com/yplog/kutimo" },
+    tags: ["flutter", "android", "mobile", "desktop"],
+    image:
+      "https://play-lh.googleusercontent.com/qjsPleorKXNzTCNiGUl-EFkuObN87M8-qoR4WhLusweGwIU2h8Ld7hllhD0v6N6nHhnn=w240-h480-rw",
+    isArchived: false,
+  },
+  {
+    title: "niminy",
+    description:
+      "Users can specify durations that help to plan their working time.",
+    link: { name: "Github", url: "https://github.com/yplog/niminy" },
+    tags: ["js", "vscode extension"],
+    image:
+      "https://niminy.gallerycdn.vsassets.io/extensions/niminy/niminy/0.0.5/1614840014776/Microsoft.VisualStudio.Services.Icons.Default",
+    isArchived: false,
+  },
+  {
+    title: "rd-dd",
+    description:
+      "This script compares the files in the PostgreSQL database with the file assets in the directory. Deletes files that are not in the database.",
+    link: { name: "Github", url: "https://github.com/yplog/rd-dd" },
+    tags: ["perl", "postgresql"],
+    image: "https://cdn.perl.org/perlweb/images/icons/header_camel.png",
+    isArchived: true,
+  },
+  {
+    title: "Raku Guide",
+    description:
+      "This document is intended to give you a quick overview of the Raku programming language.",
+    link: { name: "Link", url: "https://raku.guide/" },
+    tags: ["documentation", "raku"],
+    image: "https://www.raku.org/camelia-logo.png",
+    isArchived: false,
+  },
+  {
+    title: "EFF Dice-Generated Passphrases",
+    description:
+      "Create strong passphrases with EFF's new random number generators!",
+    link: {
+      name: "Github",
+      url: "https://github.com/yplog/EFF-Dice-Generated-Passphrases",
+    },
+    tags: ["python", "pickledb"],
+    image: "https://www.eff.org/files/banner_library/dice-1.png",
+    isArchived: true,
+  },
+  {
+    title: "Picate",
+    description: "Lets you search for photos and save them to your favorites.",
+    link: { name: "Github", url: "https://github.com/yplog/picate" },
+    tags: ["kotlin", "android", "mobile"],
+    image:
+      "https://play-lh.googleusercontent.com/f6DcvbkK2YU34s1VkjXMYxa8T7vuLd7TqMf7MSVcKEbItislbf9GoEajGfe9UZmnMkI=w240-h480-rw",
+    isArchived: true,
+  },
+  {
+    title: "Tasko",
+    description: "Distributed to-do list application running on BlockStack.",
+    link: { name: "Github", url: "https://github.com/yplog/tasko" },
+    tags: ["js", "blockstack", "blockchain"],
+    image:
+      "https://blockstack.tech/wp-content/themes/blockstack/assets/images/logo-white.svg",
+    isArchived: true,
+  },
+  {
+    title: "urcode",
+    description:
+      "Our goal is to obtain a piece of code that briefly introduce the author.",
+    link: { name: "Github", url: "https://github.com/3rco/urcode" },
+    tags: ["js", "nextjs", "pwa"],
+    image:
+      "https://urcode.vercel.app/_next/image?url=%2Fimg%2Flogo.png&w=64&q=75",
+    isArchived: true,
+  },
+];
 ---
 
 <Layout title="projects" page="projects">
-  projects
+  <p class="title">Here are some projects I developed</p>
+  <p class="summary">
+    Here are some of the little projects I've worked on over the years that I'm
+    most proud of. Many of them are open-source, so if you find something that
+    sparks your interest, feel free to check out the code and contribute if you
+    have ideas for improvements.
+  </p>
+
+  <section class="grid-container">
+    {projects.map((project) => <ProjectCard {...project} />)}
+  </section>
 </Layout>
 
 <style>
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #f4f4f5;
+  }
+
+  .summary {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #aaaaaa;
+    width: 70%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 768px) {
+    .summary {
+      width: 100%;
+    }
+
+    .grid-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 </style>
