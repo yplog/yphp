@@ -1,0 +1,83 @@
+---
+import { Image } from "astro:assets";
+
+import Divider from "./Divider.astro";
+
+import indexImage from "../assets/The-Sandman-1989_Issue-18-17.png";
+import projectsImage from "../assets/dune-2.jpg";
+import aboutImage from "../assets/dune.jpg";
+
+const { page } = Astro.props;
+
+const images = [
+  {
+    src: indexImage,
+    alt: "The Sandman 1989 Issue 18 Page 17",
+    page: "index",
+  },
+  {
+    src: projectsImage,
+    alt: "Dune",
+    page: "projects",
+  },
+  {
+    src: aboutImage,
+    alt: "Dune",
+    page: "about",
+  },
+];
+
+const image = images.find((image) => image.page === page) || images[0];
+---
+
+<main>
+  <Image
+    class="header-image"
+    src={image.src}
+    alt={image.alt}
+  />
+
+  <nav class="navigation">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/projects/">Projects</a>
+  </nav>
+
+  <Divider />
+
+</main>
+
+<style>
+  .header-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: grayscale(50%);
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .navigation a {
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: #f4f4f5;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .navigation a:hover {
+    background-color: #e6bf00;
+    color: #18181b;
+  }
+
+  .navigation a:active {
+    background-color: #c0a800;
+    color: #18181b;
+  }
+</style>

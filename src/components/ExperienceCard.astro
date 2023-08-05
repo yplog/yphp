@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+
+import nyksImage from "../assets/experience/nyks.jpeg";
+import anayurtImage from "../assets/experience/anayurt.png";
+import nettaImage from "../assets/experience/netta.jpeg";
+
+const companies = [
+  {
+    name: "Netta Tech",
+    url: "https://nettasoftware.com/",
+    logo: nettaImage,
+    title: "Software Developer",
+    startDate: "2023",
+    endDate: "present",
+  },
+  {
+    name: "Anayurt Teknoloji",
+    url: "https://www.anayurtteknoloji.com.tr/en/home/",
+    logo: anayurtImage,
+    title: "Software Developer",
+    startDate: "2021",
+    endDate: "2023",
+  },
+  {
+    name: "NYKS Software",
+    url: "https://nykssoft.com/",
+    logo: nyksImage,
+    title: "Software Developer",
+    startDate: "2020",
+    endDate: "2021",
+  },
+];
+---
+
+{
+  companies.map((company) => (
+    <div class="experience">
+      <Image src={company.logo} alt={company.name} />
+      <div class="detail">
+        <a class="link" href={company.url}>
+          {company.name}
+        </a>
+        <p>
+          {company.startDate} - {company.endDate}
+          <br />
+          {company.title}
+        </p>
+      </div>
+    </div>
+  ))
+}
+<style>
+  .experience {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .experience img {
+    border-radius: 50%;
+    max-width: 50px;
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+    background-color: black;
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: column;
+    color: #aaaaaa;
+  }
+
+  .link {
+    text-decoration: none;
+    color: #e6bf00;
+  }
+
+  .link:hover {
+    color: #e6bf00;
+  }
+
+  .link:visited {
+    color: #e6bf00;
+  }
+</style>
