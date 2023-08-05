@@ -1,9 +1,15 @@
 ---
+import { Image } from "astro:assets";
+
+import nyksImage from "../assets/experience/nyks.jpeg";
+import anayurtImage from "../assets/experience/anayurt.png";
+import nettaImage from "../assets/experience/netta.jpeg";
+
 const companies = [
   {
     name: "Netta Tech",
     url: "https://nettasoftware.com/",
-    logo: "https://media.licdn.com/dms/image/C4D0BAQF4r0EH1XvmoA/company-logo_200_200/0/1671694223522?e=1698883200&v=beta&t=4GctrbBzwyW7J6MZ5QOPmQb0A_AzRVH3xawL1IIsFNY",
+    logo: nettaImage,
     title: "Software Developer",
     startDate: "2023",
     endDate: "present",
@@ -11,7 +17,7 @@ const companies = [
   {
     name: "Anayurt Teknoloji",
     url: "https://www.anayurtteknoloji.com.tr/en/home/",
-    logo: "https://www.anayurtteknoloji.com.tr/wp-content/themes/anayurt-theme/dist/img/logo.png",
+    logo: anayurtImage,
     title: "Software Developer",
     startDate: "2021",
     endDate: "2023",
@@ -19,7 +25,7 @@ const companies = [
   {
     name: "NYKS Software",
     url: "https://nykssoft.com/",
-    logo: "https://media.licdn.com/dms/image/D4D0BAQGCZJS6vZHxcg/company-logo_200_200/0/1666165704008?e=1698883200&v=beta&t=U7YSjOUIFvEFe82UC7vQsz8AJrFA6aKdBVrfogZazZ0",
+    logo: nyksImage,
     title: "Software Developer",
     startDate: "2020",
     endDate: "2021",
@@ -30,7 +36,7 @@ const companies = [
 {
   companies.map((company) => (
     <div class="experience">
-      <img src={company.logo} alt={company.name} />
+      <Image src={company.logo} alt={company.name} />
       <div class="detail">
         <a class="link" href={company.url}>
           {company.name}
