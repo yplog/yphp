@@ -20,7 +20,6 @@ import Mail from "../components/Mail.astro";
 
     <!-- Profile Img   -->
     <Image class="profile-img" src={profileImage} alt="Yalın Pala" />
-
   </section>
 
   <section class="main-content">
@@ -61,6 +60,10 @@ import Mail from "../components/Mail.astro";
       <!-- Contact -->
       <SocialLinks />
       <Mail />
+      <p class="ask">
+        If they are not enough please ask via any of the other contact methods
+        first.
+      </p>
     </section>
     <section class="experience">
       <h4>Experience</h4>
@@ -135,5 +138,9 @@ import Mail from "../components/Mail.astro";
 
   .working:visited {
     color: #e6bf00;
+  }
+
+  .ask {
+    color: #aaaaaa;
   }
 </style>

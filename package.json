@@ -2,6 +2,7 @@
   "name": "yphp",
   "type": "module",
   "version": "2.0.0",
+  "license": "WTFPL",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
