@@ -1,11 +1,12 @@
 {{ define "main" }}
+  <p class="hi">
+    Hi, I'm Yalın. <br />
+    <span class="title">Software Developer, FOSS enthusias.</span>
+  </p>
 
-{{ .Content }}
+  <section class="summary">
+    {{ .Content  }}
+  </section>
 
-
-<h2>My Page Title</h2>
-<p>foo</p>
-<p>bar</p>
-<p>baz</p>
-
+  {{ partial "social.html" . }}
 {{ end }}

@@ -1,1 +1,37 @@
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+{{ partial "menu.html" (dict "menuID" "main" "page" .) }} 
+
+{{ $title := .Title }}
+
+{{ if .IsHome }}
+  {{ $image := resources.Get "images/The-Sandman-1989_Issue-18-17.png" }} 
+  {{ with $image }} 
+    {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+      <img
+        class="header-image"
+        src="{{ .RelPermalink }}"
+        width="{{ .Width }}"
+        height="{{ .Height }}"
+      />
+    {{ end }} 
+  {{ end }}
+{{ else if eq .Section "posts" }}
+  {{ $image := resources.Get "images/23rd-Century-Dreamers.png" }} 
+  {{ with $image }} 
+    {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+      <img
+        class="header-image"
+        src="{{ .RelPermalink }}"
+        width="{{ .Width }}"
+        height="{{ .Height }}"
+      />
+    {{ end }} 
+  {{ end }}
+{{ end }}
+
+<nav class="navigation">
+  <a href="/" aria-label="Home">Home</a>
+  <a href="/about/" aria-label="About">About</a>
+  <a href="/projects/" aria-label="Projects">Projects</a>
+</nav>
+
+<hr />

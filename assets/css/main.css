@@ -1,0 +1,203 @@
+/* Define root variables for font and background color */
+:root {
+  --font-family: "Roboto", sans-serif;
+  --background-color: black;
+}
+
+/* Set global styles for body */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+}
+
+/* Define styles for header */
+.header {
+  grid-area: header;
+  margin: 10px;
+}
+
+/* Define styles for main content area */
+.main {
+  grid-area: main;
+  width: 90%;
+  min-height: 50vh;
+  margin: 0 auto;
+}
+
+/* Define styles for footer */
+.footer {
+  grid-area: footer;
+  margin: 10px;
+}
+
+/* Define styles for footer area */
+.footer-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Define styles for date */
+.date {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 100;
+  color: #f4f4f5;
+}
+
+/* Define styles for w-a class */
+.w-a {
+  flex: 1;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Define styles for svg within w-a class */
+.w-a svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Define hover styles for svg within w-a class */
+.w-a svg:hover {
+  fill: #f4f4f5;
+}
+
+/* Define styles for footer navigation */
+.footer-navigation {
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Define styles for links within footer navigation */
+.footer-navigation a {
+  font-size: 1rem;
+  font-weight: 100;
+  text-decoration: none;
+  color: #f4f4f5;
+  padding: 0.5rem 0.5rem;
+}
+
+/* Define hover and active styles for links within footer navigation */
+.footer-navigation a:hover,
+.footer-navigation a:active {
+  background-color: #e6bf00;
+  color: #18181b;
+}
+
+/* Define styles for container */
+.container {
+  border: 1px;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 60%;
+  background-color: #18181b;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* Define styles for hi, title, and summary classes */
+.hi {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f4f4f5;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #aaaaaa;
+}
+
+.summary {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #aaaaaa;
+  width: 70%;
+}
+
+/* Define styles for social class */
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* Define styles for links and svg within social class */
+.social a {
+  margin-right: 1rem;
+}
+
+.social svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.social svg:hover {
+  fill: #f4f4f5;
+}
+
+/* Define styles for hr */
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px dashed #E6BF00;
+}
+
+/* Define styles for header image */
+.header-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(50%);
+}
+
+/* Define styles for navigation */
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Define styles for links within navigation */
+.navigation a {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: #f4f4f5;
+  padding: 0.5rem 0.5rem;
+}
+
+/* Define hover and active styles for links within navigation */
+.navigation a:hover,
+.navigation a:active {
+  background-color: #e6bf00;
+  color: #18181b;
+}
+
+/* Define responsive styles for container and main */
+@media (max-width: 640px) {
+  .container,
+  .main {
+    width: 100%;
+  }
+
+  .main {
+    margin: 0 0 5px 5px;
+  }
+}
