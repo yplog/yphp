@@ -14,8 +14,8 @@
       />
     {{ end }} 
   {{ end }}
-{{ else if eq .Section "posts" }}
-  {{ $image := resources.Get "images/23rd-Century-Dreamers.png" }} 
+{{ else if eq .Section "about" }}
+  {{ $image := resources.Get "images/dune.jpg" }} 
   {{ with $image }} 
     {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
       <img
