@@ -282,6 +282,42 @@ h4 {
   color: #aaaaaa;
 }
 
+.job {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.job img {
+  border-radius: 50%;
+  max-width: 50px;
+  width: 100%;
+  height: 50px;
+  object-fit: cover;
+  background-color: black;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  color: #aaaaaa;
+}
+
+.link {
+  text-decoration: none;
+  color: #e6bf00;
+}
+
+.link:hover {
+  color: #e6bf00;
+}
+
+.link:visited {
+  color: #e6bf00;
+}
+
 /* Define responsive styles for container and main */
 @media (max-width: 640px) {
   .container,

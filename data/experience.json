@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Netta Tech",
+    "url": "https://nettasoftware.com/",
+    "logo": "images/experience/netta.jpeg",
+    "title": "Software Developer",
+    "startDate": "2023",
+    "endDate": "present"
+  },
+  {
+    "name": "Anayurt Teknoloji",
+    "url": "https://www.anayurtteknoloji.com.tr/en/home/",
+    "logo": "images/experience/anayurt.png",
+    "title": "Software Developer",
+    "startDate": "2021",
+    "endDate": "2023"
+  },
+  {
+    "name": "NYKS Software",
+    "url": "https://nykssoft.com/",
+    "logo": "images/experience/nyks.jpeg",
+    "title": "Software Developer",
+    "startDate": "2020",
+    "endDate": "2021"
+  }
+]
