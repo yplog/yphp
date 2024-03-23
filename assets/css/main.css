@@ -158,6 +158,10 @@ body {
   color: #aaaaaa;
 }
 
+.email :hover {
+  color: #f4f4f5;
+}
+
 /* Define styles for hr */
 hr {
   margin-top: 1rem;
@@ -199,13 +203,6 @@ hr {
   color: #18181b;
 }
 
-/* Styles for h4 elements */
-h4 {
-  font-size: 2rem;
-  font-weight: 500;
-  color: #f4f4f5;
-}
-
 /* Styles for main content area */
 .main-content {
   display: flex;
@@ -244,14 +241,6 @@ h4 {
   flex: 2;
 }
 
-/* Styles for experience section */
-.experience {
-  flex: 1;
-  width: 100%;
-  max-width: 200px;
-  margin-left: 1rem;
-}
-
 /* Styles for about content */
 .about-content {
   font-size: 1.5rem;
@@ -276,9 +265,15 @@ h4 {
   color: #aaaaaa;
 }
 
-.job {
+/* Styles for experience section */
+.experience {
   display: flex;
-  align-items: center;
+  width: 100%;
+  max-width: 200px;
+  margin-left: 1rem;
+}
+
+.job {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 1rem;
@@ -293,36 +288,33 @@ h4 {
   background-color: black;
 }
 
-.detail {
+.job-detail {
   display: flex;
   flex-direction: column;
   color: #aaaaaa;
 }
 
-.link {
+.job-link {
   text-decoration: none;
   color: #e6bf00;
 }
 
-.link:hover {
+.job-link:hover {
   color: #e6bf00;
 }
 
-.link:visited {
+.job-link:visited {
   color: #e6bf00;
 }
 
-.cv-title {
-  font-size: 1.2rem;
-  font-weight: 600;
+.experience-title {
   color: #aaaaaa;
-  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 .cv-section {
   display: flex;
-  align-items: center;
-  justify-content: center;
   margin-top: 1rem;
 }
 
