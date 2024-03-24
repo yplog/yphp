@@ -1,8 +1,17 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+
+<h1 class="hi">{{ .Title }}</h1>
+
+<section class="list-description">{{ .Content }}</section>
+
+<section class="post-list">
+  {{ range .Pages }} {{ $dateMachine := .Date }} {{ $dateHuman := .Date |
+  time.Format ":date_long" }}
+  <p>
+    &emsp;- <a href="{{ .RelPermalink }}"> {{ .LinkTitle }} </a>
+    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+  </p>
   {{ end }}
+</section>
+
 {{ end }}

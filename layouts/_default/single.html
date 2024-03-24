@@ -1,12 +1,9 @@
 {{ define "main" }}
+
+<h1 class="hi">{{ .Title }}</h1>
   <article class="markdown">
-
-    <h1>{{ .Title }}</h1>
-
-    {{ $dateMachine := .Date }}
-    {{ $dateHuman := .Date | time.Format ":date_long" }}
-    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-
+    {{ partial "date.html" . }}
+   
     {{ partial "toc.html" . }}
 
     {{ .Content }}

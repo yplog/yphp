@@ -1,0 +1,3 @@
+{{ $dateMachine := .Date }}
+{{ $dateHuman := .Date | time.Format ":date_long" }}
+<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
