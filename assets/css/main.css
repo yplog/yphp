@@ -331,6 +331,102 @@ hr {
   margin-right: 10px;
 }
 
+.markdown {
+  color: #aaaaaa;
+  font-weight: 400;
+  max-width: 800px;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.markdown h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.markdown h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.markdown h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.markdown p {
+  margin-bottom: 15px;
+}
+
+.markdown img {
+  margin: 10px 0;
+  max-width: 100%;
+}
+
+.markdown code {
+  font-family: 'Consolas', monospace;
+}
+
+.markdown a {
+  color: #0073b7; /* bağlantıların rengini mavi yap */
+  text-decoration: none; /* alt çizgiyi kaldır */
+  font-weight: bold; /* bağlantıları biraz daha kalın yap */
+
+  &:hover {
+    color: #005799; /* üzerine gelindiğinde rengini koyu mavi yap */
+    text-decoration: underline; /* üzerine gelindiğinde alt çizgi ekle */
+  }
+}
+
+.toc-wrapper {
+  margin: 20px 0;
+}
+
+.toc-button {
+  padding: 10px;
+  cursor: pointer;
+  color: #777;
+
+  &:hover {
+    color: #aaaaaa;
+  }
+}
+
+.toc {
+  display: none;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  list-style: none;
+}
+
+.toc li {
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.toc li a {
+  color: #777;  
+  text-decoration: none;
+}
+
+.toc li a:hover {
+  color: #0073b7;
+  text-decoration: underline;
+}
+
+.markdown time {
+  font-size: 12px;
+  font-style: italic;
+  color: #777;
+  margin-bottom: 20px;
+}
+
 /* Define responsive styles for container and main */
 @media (max-width: 640px) {
   .container,

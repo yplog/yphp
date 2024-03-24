@@ -1,0 +1,25 @@
+{{ if and (gt .WordCount 400 ) (ne .Params.toc "false") }}
+<div class="toc-wrapper">
+  <p class="toc-button">> Table of Content</p>
+  <section class="toc">
+    {{ .TableOfContents }}
+  </section>
+</div>
+{{ end }}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tocButton = document.querySelector(".toc-button");
+    const toc = document.querySelector(".toc");
+  
+    tocButton.addEventListener("click", () => {
+      if (toc.style.display === "block") {
+        toc.style.display = "none";
+        tocButton.textContent = "> Table of Content";
+      } else {
+        toc.style.display = "block";
+        tocButton.textContent = "v Table of Content";
+      }
+    });
+  });    
+</script>
