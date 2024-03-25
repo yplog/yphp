@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+<h1 class="hi">{{ .Title }}</h1>
+  <article class="markdown">
+    {{ partial "date.html" . }}
+   
+    {{ partial "toc.html" . }}
+
+    {{ .Content }}
+
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+  </article>
+
+{{ end }}
