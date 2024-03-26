@@ -26,6 +26,18 @@
       />
     {{ end }} 
   {{ end }}
+{{ else if eq .Section "projects" }}
+  {{ $image := resources.Get "images/dune-2.jpg" }} 
+  {{ with $image }} 
+    {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+      <img
+        class="header-image"
+        src="{{ .RelPermalink }}"
+        width="{{ .Width }}"
+        height="{{ .Height }}"
+      />
+    {{ end }} 
+  {{ end }}
 {{ end }}
 
 <nav class="navigation">
