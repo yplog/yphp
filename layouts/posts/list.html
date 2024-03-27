@@ -5,12 +5,17 @@
 <section class="list-description">{{ .Content }}</section>
 
 <section class="post-list">
-  {{ range .Pages }} {{ $dateMachine := .Date }} {{ $dateHuman := .Date |
-  time.Format ":date_long" }}
-  <p>
-    &emsp;- <a href="{{ .RelPermalink }}"> {{ .LinkTitle }} </a>
-    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-  </p>
+  {{ if .Pages }}
+    {{ range .Pages }} {{ $dateMachine := .Date }} {{ $dateHuman := .Date | time.Format ":date_long" }}
+      <p>
+        &emsp;- <a href="{{ .RelPermalink }}"> {{ .LinkTitle }} </a>
+        <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+      </p>
+    {{ end }}
+  {{ else }}
+      <p>
+        &emsp;- No posts found 
+      </p>
   {{ end }}
 </section>
 
