@@ -450,6 +450,16 @@ hr {
   font-size: 1.5rem;
 }
 
+.list-description a {
+  color: #e6bf00; 
+  text-decoration: none;
+  font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 /* Define responsive styles for container and main */
 @media (max-width: 640px) {
   .container,
