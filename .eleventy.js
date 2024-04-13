@@ -1,5 +1,7 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets/css/bundle.css");
+  
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   return {
     dir: {
@@ -10,3 +12,4 @@ module.exports = function(eleventyConfig) {
     passthroughFileCopy: true,
   };
 };
+

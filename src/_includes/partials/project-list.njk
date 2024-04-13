@@ -1,0 +1,11 @@
+<ul>
+{% for project in projects %}
+    <li>
+        <h2>{{ project.title }}</h2>
+        <p>{{ project.description }}</p>
+        <p>Tags: {% for tag in project.tags %}{{ tag }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+        <a href="{{ project.link.url }}">{{ project.link.name }}</a>
+        <img src="{{ project.image }}" alt="{{ project.title }}">
+    </li>
+{% endfor %}
+</ul>

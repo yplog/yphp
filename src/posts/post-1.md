@@ -1,5 +1,6 @@
 ---
 title: 'Post 1'
+date: Created
 ---
 
 # Post 1

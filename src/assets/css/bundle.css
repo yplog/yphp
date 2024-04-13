@@ -1,9 +1,8 @@
 @font-face {
   font-family: 'Roboto';
   src: url('fonts/Roboto/Roboto-Regular.ttf') format('truetype');
-  /* İndirdiğiniz font dosyasının yolu ve formatı buraya yazılmalı */
-  font-weight: 400; /* Kalınlık */
-  font-style: normal; /* Stil */
+  font-weight: 400;
+  font-style: normal;
 }
 
 html {
@@ -11,15 +10,16 @@ html {
 }
 
 body {
+  background-color: black;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   margin: 0;
   display: grid;
-  grid-template-rows: auto 1fr auto; /* Başlık, İçerik, Altbilgi */
-  height: 100vh; /* Ekran yüksekliği kadar alır */
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box; /* Padding hesabı kutu modeline dahil edilir */
+  box-sizing: border-box;
   width: 70%;
   margin: auto;
 }
@@ -30,13 +30,14 @@ header, footer {
 }
 
 header, footer {
-  background-color: #333;
+  background-color: #18181b;
   color: white;
 }
 
 main {
-  background-color: #f2f2f2;
+  background-color: #18181b;
   padding: 20px;
+  color: #f4f4f4;
 }
 
 /* Nav */
@@ -44,7 +45,6 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: #333;
 }
 
 nav a {
