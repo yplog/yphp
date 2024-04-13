@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/assets/css/bundle.css">
+</head>
+<body>
+  <header>
+    {% include "partials/navigation.njk" %}
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer>
+    {% include "partials/footer.njk" %}
+  </footer>
+</body>
+</html>
