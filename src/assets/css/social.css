@@ -1,0 +1,20 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.social a {
+  margin-right: 1rem;
+}
+
+.social svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.social svg:hover {
+  fill: #f4f4f5;
+}

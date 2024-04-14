@@ -58,6 +58,13 @@ nav a:hover {
   background-color: #555;
 }
 
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px dashed #FFEEAD;
+}
+
 @media screen and (max-width: 600px) {
   body {
       width: 100%;

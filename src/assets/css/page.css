@@ -1,0 +1,34 @@
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #f4f4f5;
+}
+
+.summary {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #aaaaaa;
+}
+
+.content {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #aaaaaa;
+  width: 70%;
+}
+
+.about-content {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #aaaaaa;
+  line-height: 1.3;
+}
+
+.link {
+  color: #FFEEAD;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
