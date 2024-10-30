@@ -1,93 +1,50 @@
 ---
-import '@fontsource/roboto/100.css';
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
-import '@fontsource/roboto/900.css';
-
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-
 interface Props {
-  title: string;
-  page: string;
+	title: string;
 }
 
-const { title, page } = Astro.props;
+const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="yp's home page" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <section class="container">
-      <header class="header">
-        <Header page={page} />
-      </header>
-      <main class="main">
-        <slot />
-      </main>
-      <footer class="footer">
-        <Footer />
-      </footer>
-    </section>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
 </html>
-
 <style is:global>
-  :root {
-    font-family: "Roboto", sans-serif;
-    background-color: black;
-  }
-
-  .header {
-    grid-area: header;
-    margin: 10px;
-  }
-
-  .main {
-    grid-area: main;
-    width: 90%;
-    min-height: 50vh;
-    margin: 0 auto;
-  }
-
-  .footer {
-    grid-area: footer;
-    margin: 10px;
-  }
-
-  .container {
-    border: 1px;
-    border-radius: 5px;
-    margin: 0 auto;
-    width: 60%;
-    background-color: #18181b;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
-
-  @media (max-width: 640px) {
-    .container {
-      width: 100%;
-    }
-
-    .main {
-      width: 100%;
-      margin: 0 0 5px 5px;
-    }
-  }
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
 </style>
