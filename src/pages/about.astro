@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/BaseLayout.astro";
+import InlineLink from "../components/InlineLink.astro";
+
+const title = 'About'
+---
+
+
+<Layout title={title}>
+    <main class="space-y-4">
+        <h1 class="text-5xl text-h1-text">
+            I’m Yalın Pala. <br />
+            I live in Ankara, Turkey.
+        </h1>
+
+        <p class="text-2xl text-h2-text">
+            I'm a software developer with a passion for building things.
+            I'm currently working at <InlineLink href="https://www.linkedin.com/company/netta-tech" content="Netta Tech" /> as a software developer.
+        </p>
+        <p class="text-2xl text-h2-text">
+            I improved myself with the help of various courses and curiosity.
+            I have worked in various freelance jobs.
+            I'm a big fan of Free and open-source software and I try to develop and contribute to open source projects when I can.
+            I have been a member of <InlineLink href="https://www.fsf.org/" content="FSF" /> since 2015 and in the same years
+            I became the founder of <InlineLink href="https://www.pm.org/groups/649.html" content="Perl Mongers Ankara" />.
+            In addition to my expertise in JavaScript and TypeScript, I also have hands-on experience with Ruby on Rails, Rust, Go.
+        </p>
+
+        <p class="text-2xl text-h2-text">
+            I'm also a big fan of role-playing games,
+            I love playing indie games and even developing games whenever I can.
+            I like to read comics and I have a collection, even if it's not a big one.
+        </p>
+    </main>
+</Layout>

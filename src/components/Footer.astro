@@ -1,0 +1,16 @@
+---
+import Icon from "./Icon.astro";
+const year = new Date().getFullYear()
+
+---
+
+<footer class="flex justify-between">
+    <p class="text-h1-text">{year}, Yalın Pala</p>
+    <a href="http://www.wtfpl.net/" target="_blank">
+        <Icon alt="wtfpl" width="36px" height="36px" resource="/wtfpl.svg" />
+    </a>
+    <p>{year}, Yalın Pala</p>
+</footer>
+
+<style>
+</style>
