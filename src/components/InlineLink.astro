@@ -2,12 +2,13 @@
 interface Props {
   href: string;
   content: string;
+  target?: string;
 }
 
-const { href, content } = Astro.props;
+const { href, content, target= "_blank" } = Astro.props;
 ---
 
-<a class="inline-link" href={href} target="_blank">{content}</a>
+<a class="inline-link" href={href} target={target}>{content}</a>
 
 <style>
   .inline-link {
