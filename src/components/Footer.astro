@@ -1,16 +1,19 @@
 ---
-import Icon from "./Icon.astro";
+import IconWtfpl from "./icons/IconWtfpl.astro";
 const year = new Date().getFullYear()
 
 ---
 
-<footer class="flex justify-between">
+<footer class="flex justify-between items-center py-4">
     <p class="text-h1-text">{year}, Yalın Pala</p>
-    <a href="http://www.wtfpl.net/" target="_blank">
-        <Icon alt="wtfpl" width="36px" height="36px" resource="/wtfpl.svg" />
+    <a class="hover:opacity-80" href="http://www.wtfpl.net/" target="_blank">
+        <IconWtfpl width="36" height="36" />
     </a>
-    <p>{year}, Yalın Pala</p>
+    <p>
+        <a
+          class="nav-link text-gray-300 text-lg px-4 py-2 hover:text-gray-200 hover:underline transition duration-300 ease-in-out"
+          href="/rss.xml">
+            rss
+        </a>
+    </p>
 </footer>
-
-<style>
-</style>
