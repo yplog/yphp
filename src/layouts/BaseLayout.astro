@@ -1,0 +1,39 @@
+---
+import '@fontsource/roboto/100.css';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import '@fontsource/roboto/900.css';
+
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import '@fontsource/roboto';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="flex flex-col min-h-screen max-w-3xl m-auto bg-dark-bg">
+		<Header />
+
+		<main class="flex-grow">
+			<slot />
+		</main>
+
+		<Footer />
+	</body>
+</html>

@@ -1,8 +1,10 @@
-import { defineConfig } from "astro/config";
+// @ts-check
+import { defineConfig } from 'astro/config';
+
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  // experimental: {
-  //   assets: true,
-  // },
+  site: "https://yalinpala.dev",
+  integrations: [tailwind()]
 });

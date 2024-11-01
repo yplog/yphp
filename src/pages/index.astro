@@ -1,47 +1,32 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import SocialLinks from "../components/SocialLinks.astro";
+import Layout from '../layouts/BaseLayout.astro';
+import InlineLink from "../components/InlineLink.astro";
+import Contact from "../components/Contact.astro";
+
+const title = 'Home';
 ---
 
-<Layout title="yp's home page" page="index">
-  <p class="hi">
-    Hi, I'm Yalın. <br />
-    <span class="title">Software Developer, FOSS enthusias.</span>
-  </p>
-  <p class="summary">
-    My passion lies in contributing to and developing open source projects. I’m
-    interested in building accessible, maintainable, distributed systems.
-    Currently, I work as a software developer at Netta Tech.
-  </p>
+<Layout title={title}>
+	<main class="space-y-4">
+		<h1 class="text-5xl text-h1-text">Hi, I'm Yalın.</h1>
+		<h2 class="text-4xl text-h2-text mb-8">Software Developer & FOSS Enthusiast</h2>
+		<p class="text-2xl text-h2-text">
+			I'm passionate about contributing to and developing open-source projects.
+			I enjoy building accessible, maintainable, and distributed systems.
+			Currently, I’m working as a software developer at
+			<InlineLink href="https://www.linkedin.com/company/netta-tech" content="Netta Tech" />.
+		</p>
 
-  <section>
-    <SocialLinks />
-  </section>
+		<p class="text-2xl text-h2-text">
+			For more details about me, feel free to visit my
+			<InlineLink href="/about" content="about" target="_self" /> page.
+		</p>
+
+		<section>
+			<p class="text-2xl text-h2-text py-4">
+				You can reach me on:
+			</p>
+			<Contact />
+		</section>
+	</main>
 </Layout>
-
-<style>
-  .hi {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #f4f4f5;
-  }
-
-  .title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: #aaaaaa;
-  }
-
-  .summary {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: #aaaaaa;
-    width: 70%;
-  }
-
-  @media screen and (max-width: 768px) {
-    .summary {
-      width: 100%;
-    }
-  }
-</style>

@@ -1,0 +1,28 @@
+---
+interface Props {
+  href: string;
+  content: string;
+  target?: string;
+}
+
+const { href, content, target= "_blank" } = Astro.props;
+---
+
+<a class="inline-link" href={href} target={target}>{content}</a>
+
+<style>
+  .inline-link {
+    color: #f9e79f;
+    transition: color 0.3s ease;
+  }
+
+  .inline-link:hover {
+    color: #f7d794;
+    text-decoration: underline;
+  }
+
+  .inline-link:focus {
+    outline: 2px dashed #f9e79f;
+    outline-offset: 2px;
+  }
+</style>
