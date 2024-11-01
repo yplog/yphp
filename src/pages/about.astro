@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/BaseLayout.astro";
 import InlineLink from "../components/InlineLink.astro";
+import Contact from "../components/Contact.astro";
 
 const title = 'About'
 ---
@@ -13,11 +14,11 @@ const title = 'About'
             I live in Ankara, Turkey.
         </h1>
 
-        <p class="text-2xl text-h2-text">
+        <p class="text-2xl text-h2-text font-light">
             I'm a software developer with a passion for building things.
             I'm currently working at <InlineLink href="https://www.linkedin.com/company/netta-tech" content="Netta Tech" /> as a software developer.
         </p>
-        <p class="text-2xl text-h2-text">
+        <p class="text-2xl text-h2-text font-light">
             I improved myself with the help of various courses and curiosity.
             I have worked in various freelance jobs.
             I'm a big fan of Free and open-source software and I try to develop and contribute to open source projects when I can.
@@ -26,10 +27,18 @@ const title = 'About'
             In addition to my expertise in JavaScript and TypeScript, I also have hands-on experience with Ruby on Rails, Rust, Go.
         </p>
 
-        <p class="text-2xl text-h2-text">
+        <p class="text-2xl text-h2-text font-light">
             I'm also a big fan of role-playing games,
             I love playing indie games and even developing games whenever I can.
             I like to read comics and I have a collection, even if it's not a big one.
+        </p>
+
+        <p class="text-2xl text-h2-text font-light pt-6">
+            You can reach me on:
+        </p>
+        <Contact />
+        <p class="text-2xl text-h2-text font-light">
+            If they are not enough please ask via any of the other contact methods first.
         </p>
     </main>
 </Layout>
