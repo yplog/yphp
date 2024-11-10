@@ -4,7 +4,7 @@ const navList = [
     { href: '/about', title: '/About' },
 ];
 
-const currentPath = Astro.url.pathname;
+const currentPath = new URL(Astro.request.url).pathname;
 ---
 
 <nav class="flex bg-dark-bg">
