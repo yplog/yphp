@@ -1,0 +1,9 @@
+---
+interface Props {
+  isHeader?: boolean;
+}
+
+const { isHeader = false } = Astro.props;
+---
+
+<hr class={`border-t-2 border-dashed border-gray-400 my-4 ${isHeader ? "mb-6" : "mt-6"}`} />

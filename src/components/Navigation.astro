@@ -7,9 +7,9 @@ const navList = [
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="flex bg-dark-bg py-4">
+<nav class="flex bg-dark-bg">
   {navList.map(({ href, title }) => (
-    <a class=`${currentPath === href ? 'underline': ''} nav-link text-gray-300 text-lg px-4 py-2 hover:text-gray-200 hover:underline transition duration-300 ease-in-out` href={href}>
+    <a class={`${currentPath === href ? 'underline' : ''} nav-link text-gray-300 text-lg px-4 py-2 hover:text-gray-200 hover:underline transition duration-300 ease-in-out`} href={href}>
       {title}
     </a>
   ))}
