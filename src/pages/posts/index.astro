@@ -1,0 +1,27 @@
+---
+import Layout from "../../layouts/BaseLayout.astro";
+import { getPostsCollection } from "../../helpers/collections";
+import { sortAndFormatPosts } from "../../helpers/sort";
+import PostList from "../../components/PostList.astro";
+
+const title = "Posts";
+
+const allPosts = await getPostsCollection();
+
+const sortedPosts = sortAndFormatPosts(allPosts);
+---
+
+<Layout title={title}>
+  <main class="space-y-8">
+    <h1 class="text-4xl font-bold text-h1-text mb-8">Posts</h1>
+    <ul class="space-y-4">
+      {
+        sortedPosts.length === 0 ? (
+          <p class="text-h2-text">Things are a bit quiet here for now.</p>
+        ) : (
+          <PostList posts={sortedPosts} />
+        )
+      }
+    </ul>
+  </main>
+</Layout>

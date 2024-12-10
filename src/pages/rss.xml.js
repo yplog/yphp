@@ -1,11 +1,21 @@
-import rss from '@astrojs/rss';
+import rss from "@astrojs/rss";
+import { getCollection } from 'astro:content';
+import { getPostsCollection } from "../helpers/collections";
 
-export function GET(context) {
+export async function GET(context) {
+  const posts = await getPostsCollection(); 
+
   return rss({
-    title: 'yp’s Blog',
-    description: 'Software development and open-source content by yp.',
+    title: "yp’s Blog",
+    description: "Software development and open-source content by yp.",
     site: context.site,
-    items: [],
+    items: posts.map((post) => ({
+      title: post.data.title,
+      description: post.data.description,
+      pubDate: post.data.pubDate,
+      tags: post.data.tags,
+      link: `/posts/${post.id}/`,
+    })),
     customData: `<language>en-us</language>`,
   });
 }

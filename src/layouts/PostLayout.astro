@@ -1,0 +1,79 @@
+---
+import { Image } from "astro:assets";
+import MarkdownStyles from "../styles/markdown.astro";
+import { formatLocaleDate } from "../helpers/date";
+
+import Header from "../components/Header.astro";
+import Divider from "../components/Divider.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  pubDate: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
+  tags?: string[];
+}
+
+const { title, description, pubDate, image, tags } = Astro.props as Props;
+
+const formattedPubDate = formatLocaleDate(new Date(pubDate));
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="yp's home page" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="flex flex-col min-h-screen max-w-3xl m-auto bg-dark-bg">
+    <Header />
+    <Divider isHeader={true} />
+
+    <main class="flex-grow markdown-content">
+      {
+        image && (
+          <Image
+            src={image.src}
+            width="1200"
+            height="675"
+            alt={image.alt}
+            format="webp"
+            decoding="async"
+            loading="lazy"
+            class="post-header-image"
+          />
+        )
+      }
+
+      <div class="post-header mb-8">
+        <h1 class="text-4xl font-bold text-h1-text mb-4">{title}</h1>
+        <p class="text-gray-400 mb-2">Published on: {formattedPubDate}</p>
+        <p class="text-xl text-h2-text italic">{description}</p>
+      </div>
+
+      <slot />
+      
+      {
+        tags && tags.length > 0 && (
+          <div class="mt-4">
+            <span class="text-gray-400">Tags: </span>
+            {tags.map((tag: string) => (
+              <span class="text-gray-300 py-1 text-sm"> #{tag}</span>
+            ))}
+          </div>
+        )
+      }
+    </main>
+
+    <Divider />
+    <Footer />
+    <MarkdownStyles />
+  </body>
+</html>

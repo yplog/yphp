@@ -1,0 +1,43 @@
+---
+import { getPostsCollection } from "../../helpers/collections";
+import Layout from "../../layouts/BaseLayout.astro";
+import { sortAndFormatPosts } from "../../helpers/sort";
+import PostList from "../../components/PostList.astro";
+
+export async function getStaticPaths() {
+  const posts = await getPostsCollection();
+
+  const allTags = posts.map((post) => post.data.tags).flat();
+
+  return [...new Set(allTags)].map((tag) => ({
+    params: { tag },
+    props: { posts },
+  }));
+}
+
+const title = "Tagged Posts";
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+
+const filteredPosts = posts.filter((post: any) =>
+  post.data.tags?.includes(tag)
+);
+
+const sortedPosts = sortAndFormatPosts(filteredPosts);
+---
+
+<Layout title={title}>
+  <main class="space-y-8">
+    <h1 class="text-4xl font-bold text-h1-text mb-8">Results for '#{tag}'</h1>
+    <ul class="space-y-4">
+      {
+        sortedPosts.length === 0 ? (
+          <p class="text-h2-text">Things are a bit quiet here for now.</p>
+        ) : (
+          <PostList posts={sortedPosts} />
+        )
+      }
+    </ul>
+  </main>
+</Layout>
