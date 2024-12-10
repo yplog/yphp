@@ -1,0 +1,21 @@
+---
+import Tags from './Tags.astro';
+
+interface Props {
+  posts: Array<any>;
+}
+
+const { posts } = Astro.props as Props;
+---
+
+{
+  posts.map((post: any) => (
+    <li class="p-4 relative before:content-['•'] before:absolute before:left-0 before:text-h1-text before:font-bold before:top-1/2 before:transform before:-translate-y-1/2 pl-6">
+      <a href={`/posts/${post.id}`} class="text-h1-text hover:text-h2-text">
+        <span class="block text-gray-400">{post.pubDate}</span>
+        <span class="block text-xl font-semibold">{post.data.title}</span>
+      </a>
+      <Tags tags={post.data.tags} />
+    </li>
+  ))
+}

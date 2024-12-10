@@ -1,16 +1,20 @@
 ---
 const navList = [
-    { href: '/', title: '/Home' },
-    { href: '/about', title: '/About' },
+  { href: "/", title: "/Home" },
+  { href: "/about", title: "/About" },
+  { href: "/posts", title: "/Posts" },
 ];
 ---
 
 <nav class="flex bg-dark-bg">
-  {navList.map(({ href, title }) => (
-    <a class="nav-link text-gray-300 text-lg px-4 py-2 hover:text-gray-200 hover:underline transition duration-300 ease-in-out"
-       href={href}
-    >
-      {title}
-    </a>
-  ))}
+  {
+    navList.map(({ href, title }) => (
+      <a
+        class="nav-link text-gray-300 text-lg px-4 py-2 hover:text-gray-200 hover:underline transition duration-300 ease-in-out"
+        href={href}
+      >
+        {title}
+      </a>
+    ))
+  }
 </nav>

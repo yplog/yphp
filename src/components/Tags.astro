@@ -1,0 +1,13 @@
+---
+import InlineLink from './InlineLink.astro';
+
+interface Props {
+  tags: string[];
+}
+
+const { tags } = Astro.props as Props;
+---
+
+{tags.map((tag: string) => (
+  <InlineLink href={`/tags/${tag}`} content={`#${tag}`} target='_self'/>
+))}
