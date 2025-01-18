@@ -1,5 +1,4 @@
 import rss from "@astrojs/rss";
-import { getCollection } from 'astro:content';
 import { getPostsCollection } from "../helpers/collections";
 
 export async function GET(context) {

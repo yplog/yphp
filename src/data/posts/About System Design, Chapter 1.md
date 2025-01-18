@@ -7,8 +7,8 @@ image:
     alt: 'The accompanying image represents the building blocks of system design, symbolized through Lego blocks.'
     createdBy: 'Xavi Cabrera'
     creatorLink: 'https://unsplash.com/photos/yellow-red-blue-and-green-lego-blocks-kn-UmDZQDjM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'
-tags: ['System Design', 'Notes and Insights', 'en']
-draft: false
+tags: ['System Design', 'Software Architecture', 'en']
+isDraft: false
 ---
 
 ## Table of Contents

@@ -20,6 +20,7 @@ image:
     createdBy: 'Astro'
     creatorLink: 'https://docs.astro.build'
 tags: ["astro", "automation", "javascript"]
+isDraft: true
 ---
 
 # My Blog Post for ${today}
