@@ -10,6 +10,8 @@ const posts = defineCollection({
     image: z.object({
       src: z.string(),
       alt: z.string(),
+      createdBy: z.string().optional(),
+      creatorLink: z.string().optional(),
     }).optional(),
     tags: z.array(z.string()),
     isDraft: z.boolean().default(true),
