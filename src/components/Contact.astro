@@ -1,25 +1,22 @@
 ---
-import IconMastodon from "./icons/IconMastodon.astro";
-import IconLinkedin from "./icons/IconLinkedin.astro";
-import IconGithub from "./icons/IconGithub.astro";
-import IconEmail from "./icons/IconEmail.astro";
+import Icon from "./icons/Icon.astro";
 
 ---
 
 <div class="flex flex-row gap-6">
     <a class="hover:opacity-80" href="https://fosstodon.org/@yplog" target="_blank">
-        <IconMastodon width="36" height="36" />
+        <Icon name="mastodon" />
     </a>
 
     <a class="hover:opacity-80" href="https://github.com/yplog" target="_blank">
-        <IconGithub width="36" height="36" />
+        <Icon name="github" />
     </a>
 
     <a class="hover:opacity-80" href="https://www.linkedin.com/in/yalin-pala/" target="_blank">
-        <IconLinkedin width="36" height="36" />
+        <Icon name="linkedin" />
     </a>
 
     <a class="hover:opacity-80" href="mailto:yalinpala@protonmail.com" target="_blank">
-        <IconEmail width="36" height="36" />
+        <Icon name="email" />
     </a>
 </div>
