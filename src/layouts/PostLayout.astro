@@ -2,7 +2,6 @@
 import { Image } from "astro:assets";
 import MarkdownStyles from "../styles/markdown.astro";
 import { formatLocaleDate } from "../helpers/date";
-
 import Header from "../components/Header.astro";
 import Divider from "../components/Divider.astro";
 import Footer from "../components/Footer.astro";
@@ -34,7 +33,7 @@ const formattedPubDate = formatLocaleDate(new Date(pubDate));
     <meta name="generator" content={Astro.generator} />
     <meta name="fediverse:creator" content="@yplog@fosstodon.org">
     <title>{title}</title>
-  </head>
+</head>
   <body class="flex flex-col min-h-screen max-w-3xl m-auto bg-dark-bg">
     <Header />
     <Divider isHeader={true} />
@@ -83,5 +82,13 @@ const formattedPubDate = formatLocaleDate(new Date(pubDate));
     <Divider />
     <Footer />
     <MarkdownStyles />
+
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+
+      if (document.getElementsByClassName("mermaid").length > 0) {
+        mermaid.initialize({ startOnLoad: true, theme: "dark" });
+      }
+    </script>
   </body>
 </html>
