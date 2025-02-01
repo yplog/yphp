@@ -8,7 +8,6 @@ image:
     createdBy: 'Xavi Cabrera'
     creatorLink: 'https://unsplash.com/photos/yellow-red-blue-and-green-lego-blocks-kn-UmDZQDjM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'
 tags: ['System Design', 'Software Architecture', 'en']
-isDraft: false
 ---
 
 ## Table of Contents
