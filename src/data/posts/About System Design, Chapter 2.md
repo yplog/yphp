@@ -8,7 +8,6 @@ image:
     createdBy: 'Maria Teneva'
     creatorLink: 'https://unsplash.com/@miteneva'
 tags: ['System Design', 'Software Architecture', 'en']
-draft: true
 ---
 
 ## Table of Contents
