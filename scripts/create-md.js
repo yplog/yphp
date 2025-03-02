@@ -1,9 +1,9 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
-const today = new Date().toISOString().split('T')[0];
+const today = new Date().toISOString().split("T")[0];
 
-const postsDir = path.resolve('./src/data/posts');
+const postsDir = path.resolve("./src/data/posts");
 const filename = path.join(postsDir, `_${today}.md`);
 
 if (!fs.existsSync(postsDir)) {
@@ -28,6 +28,6 @@ draft: true
 This is the content of the blog post.
 `;
 
-fs.writeFileSync(filename, content, { encoding: 'utf8' });
+fs.writeFileSync(filename, content, { encoding: "utf8" });
 
 console.log(`Created file: ${filename}`);

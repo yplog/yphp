@@ -21,7 +21,7 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 
 const filteredPosts = posts.filter((post: any) =>
-  post.data.tags?.includes(tag)
+  post.data.tags?.includes(tag),
 );
 
 const sortedPosts = sortAndFormatPosts(filteredPosts);
