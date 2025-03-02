@@ -48,13 +48,12 @@ const { lastUpdated, focus, work, learning, entertainment, reading } = now;
           Playing <strong>{entertainment.game}</strong>.
         </p>
         <p class="text-xl text-h2-text font-light">
-          Watching <strong
-            >{
-              entertainment.series == "-"
-                ? "I can't say I've watched much these days"
-                : entertainment.series
-            }</strong
-          >.
+          {
+            entertainment.series == "-"
+              ? "I haven't been watching much these days"
+              : `Watching <strong>${entertainment.series}</strong>`
+          }
+          .
         </p>
         <p class="text-xl text-h2-text font-light">
           Listening to <strong>{entertainment.music}</strong>.
@@ -74,12 +73,11 @@ const { lastUpdated, focus, work, learning, entertainment, reading } = now;
           I'm currently reading <strong>{reading.book}</strong>.
         </p>
         <p class="text-xl text-h2-text font-light">
-          Also you can find my <InlineLink
+          You can check out my <InlineLink
             href={reading.goodreads.profile}
             content="Goodreads"
             target="_blank"
-          /> account, but I don't update it regularly. It's new and I'm still figuring
-          it out.
+          /> account, though I don't update it regularly—still figuring it out.
         </p>
       </section>
     </div>
@@ -97,8 +95,11 @@ const { lastUpdated, focus, work, learning, entertainment, reading } = now;
       /> movement.
     </p>
     <p class="text-xl text-h2-text font-light">
-      * <InlineLink href="/blog" content="Check out my blog" target="_self" /> or
-      follow me on <InlineLink
+      * Feel free to check out my <InlineLink
+        href="/blog"
+        content="blog"
+        target="_self"
+      /> or connect with me on <InlineLink
         href="https://fosstodon.org/@yplog"
         content="Mastodon"
         target="_blank"
