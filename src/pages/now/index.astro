@@ -1,0 +1,106 @@
+---
+import InlineLink from "../../components/InlineLink.astro";
+import Layout from "../../layouts/BaseLayout.astro";
+
+import now from "../../data/now.json";
+
+const title = "Now";
+
+const { lastUpdated, focus, work, learning, entertainment, reading } = now;
+---
+
+<Layout title={title}>
+  <main>
+    <h1 class="text-4xl font-bold text-h1-text mb-8">What I'm Doing Now</h1>
+    <p class="text-xl text-h2-text font-light mt-2">
+      Last updated: {lastUpdated}
+    </p>
+
+    <div class="mt-6 space-y-6">
+      <section>
+        <h2 class="text-2xl font-semibold text-h1-text">Focus</h2>
+        <p class="text-xl text-h2-text font-light">
+          I'm currently working on <strong>{focus.current}</strong>,
+          focusing on <strong>{focus.goal}</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-h1-text">Work</h2>
+        <p class="text-xl text-h2-text font-light">
+          Working as a <strong>{work.current}</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-h1-text">Learning</h2>
+        <p class="text-xl text-h2-text font-light">
+          Currently learning <strong>{learning.skill}</strong> and exploring <strong
+            >{learning.topic}</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-h1-text">Entertainment</h2>
+        <p class="text-xl text-h2-text font-light">
+          Playing <strong>{entertainment.game}</strong>.
+        </p>
+        <p class="text-xl text-h2-text font-light">
+          Watching <strong
+            >{
+              entertainment.series == "-"
+                ? "I can't say I've watched much these days"
+                : entertainment.series
+            }</strong
+          >.
+        </p>
+        <p class="text-xl text-h2-text font-light">
+          Listening to <strong>{entertainment.music}</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-semibold text-h1-text">
+          Reading
+          <InlineLink
+            href={reading.goodreads.currentlyReading}
+            content="*"
+            target="_blank"
+          />
+        </h2>
+        <p class="text-xl text-h2-text font-light">
+          I'm currently reading <strong>{reading.book}</strong>.
+        </p>
+        <p class="text-xl text-h2-text font-light">
+          Also you can find my <InlineLink
+            href={reading.goodreads.profile}
+            content="Goodreads"
+            target="_blank"
+          /> account, but I don't update it regularly. It's new and I'm still figuring
+          it out.
+        </p>
+      </section>
+    </div>
+
+    <p class="text-xl text-h2-text font-light mt-8">
+      * This page is inspired by Derek Siver’s
+      <InlineLink
+        href="https://sivers.org/now"
+        content="now page suggestion"
+        target="_blank"
+      /> and his <InlineLink
+        href="https://sivers.org/now"
+        content="Now Now Now"
+        target="_blank"
+      /> movement.
+    </p>
+    <p class="text-xl text-h2-text font-light">
+      * <InlineLink href="/blog" content="Check out my blog" target="_self" /> or
+      follow me on <InlineLink
+        href="https://fosstodon.org/@yplog"
+        content="Mastodon"
+        target="_blank"
+      />.
+    </p>
+  </main>
+</Layout>

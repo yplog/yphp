@@ -31,33 +31,42 @@ const formattedPubDate = formatLocaleDate(new Date(pubDate));
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="fediverse:creator" content="@yplog@fosstodon.org">
+    <meta name="fediverse:creator" content="@yplog@fosstodon.org" />
     <title>{title}</title>
-</head>
+  </head>
   <body class="flex flex-col min-h-screen max-w-3xl m-auto bg-dark-bg">
     <Header />
     <Divider isHeader={true} />
 
     <main class="flex-grow markdown-content">
-      {image && (
-        <>
-          <Image
-            src={image.src}
-            width="1200"
-            height="675"
-            alt={image.alt}
-            format="webp"
-            decoding="async"
-            loading="lazy"
-            class="post-header-image"
-          />
-          {image?.createdBy && image.creatorLink && (
-            <p class="text-gray-400 text-sm text-center">
-              Image by: <a href={image.creatorLink} target="_blank" class="text-h2-text hover:underline italic">{image.createdBy}</a>
-            </p>
-          )}
-        </>
-      )}
+      {
+        image && (
+          <>
+            <Image
+              src={image.src}
+              width="1200"
+              height="675"
+              alt={image.alt}
+              format="webp"
+              decoding="async"
+              loading="lazy"
+              class="post-header-image"
+            />
+            {image?.createdBy && image.creatorLink && (
+              <p class="text-gray-400 text-sm text-center">
+                Image by:{" "}
+                <a
+                  href={image.creatorLink}
+                  target="_blank"
+                  class="text-h2-text hover:underline italic"
+                >
+                  {image.createdBy}
+                </a>
+              </p>
+            )}
+          </>
+        )
+      }
 
       <div class="post-header mb-8">
         <h1 class="text-4xl font-bold text-h1-text mb-4">{title}</h1>
@@ -66,7 +75,7 @@ const formattedPubDate = formatLocaleDate(new Date(pubDate));
       </div>
 
       <slot />
-      
+
       {
         tags && tags.length > 0 && (
           <div class="mt-4">
@@ -84,7 +93,7 @@ const formattedPubDate = formatLocaleDate(new Date(pubDate));
     <MarkdownStyles />
 
     <script type="module">
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
 
       if (document.getElementsByClassName("mermaid").length > 0) {
         mermaid.initialize({ startOnLoad: true, theme: "dark" });

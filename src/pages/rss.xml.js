@@ -2,7 +2,7 @@ import rss from "@astrojs/rss";
 import { getPostsCollection } from "../helpers/collections";
 
 export async function GET(context) {
-  const posts = await getPostsCollection(); 
+  const posts = await getPostsCollection();
 
   return rss({
     title: "yp’s Blog",

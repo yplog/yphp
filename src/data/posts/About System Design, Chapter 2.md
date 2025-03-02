@@ -1,27 +1,27 @@
 ---
-title: 'About System Design, Chapter 2'
+title: "About System Design, Chapter 2"
 pubDate: 2025-02-03
-description: 'In this second part of the series, I’ll focus on key properties that affect how systems behave: Consistency, Availability, Partition Tolerance, Latency, Durability, Fault Tolerance, and Scalability.'
+description: "In this second part of the series, I’ll focus on key properties that affect how systems behave: Consistency, Availability, Partition Tolerance, Latency, Durability, Fault Tolerance, and Scalability."
 image:
-    src: 'https://images.unsplash.com/photo-1556611832-c5f358b0057e?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    alt: 'Greenwich Foot Tunnel , London, England'
-    createdBy: 'Maria Teneva'
-    creatorLink: 'https://unsplash.com/@miteneva'
-tags: ['System Design', 'Software Architecture', 'en']
+  src: "https://images.unsplash.com/photo-1556611832-c5f358b0057e?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  alt: "Greenwich Foot Tunnel , London, England"
+  createdBy: "Maria Teneva"
+  creatorLink: "https://unsplash.com/@miteneva"
+tags: ["System Design", "Software Architecture", "en"]
 ---
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Consistency](#consistency)
-    - [Data Consistency](#data-consistency)
+  - [Data Consistency](#data-consistency)
 - [Availability](#availability)
 - [Latency](#latency)
 - [Durability](#durability)
 - [Fault Tolerance](#fault-tolerance)
 - [Scalability](#scalability)
-    - [Vertical Scaling](#vertical-scaling)
-    - [Horizontal Scaling](#horizontal-scaling)
+  - [Vertical Scaling](#vertical-scaling)
+  - [Horizontal Scaling](#horizontal-scaling)
 - [Conclusion](#conclusion)
 - [References](#references)
 
@@ -40,10 +40,11 @@ Consistency means that a system or data remains correct and aligned with certain
 It means that a dataset or database is always in a valid and consistent state.
 Example, in an e-commerce site, if a product shows 10 items in stock but goes negative when multiple users buy it, that is an inconsistency.
 
-It is an important part of ACID (*Atomicity*, *Consistency*, *Isolation*, *Durability*), especially in relational databases.
+It is an important part of ACID (_Atomicity_, _Consistency_, _Isolation_, _Durability_), especially in relational databases.
 Example, in a banking system, when money is withdrawn from an account, the same amount should be deducted elsewhere. If one part updates but the other does not, it creates an inconsistency.
 
 Okay, what is the ACID?
+
 - **Atomicity**: A single operation is either completed or not at all.
 - **Consistency**: The database is always in a valid and consistent state.
 - **Isolation**: The operations are independent of each other.
@@ -62,13 +63,13 @@ They are primarily two types of consistency models that can be used in distribut
 
 We get approximately a table like this.
 
-| Feature | Strong Consistency | Eventual Consistency |
-| --- | --- | --- |
-| Speed | Slower due to synchronization overhead. | Faster because updates propagate asynchronously. |
+| Feature      | Strong Consistency                                           | Eventual Consistency                                                 |
+| ------------ | ------------------------------------------------------------ | -------------------------------------------------------------------- |
+| Speed        | Slower due to synchronization overhead.                      | Faster because updates propagate asynchronously.                     |
 | Availability | Lower, as system may reject requests during synchronization. | Higher, as updates are accepted without waiting for synchronization. |
-| Use Cases | Financial systems, critical applications. | Social media feeds, caching systems. |
-| Complexity | More complex due to strict coordination.	 | Simpler and more scalable. |
-| Trade-off | More consistent data, but slower operations. | Faster operations, but less consistent data. |
+| Use Cases    | Financial systems, critical applications.                    | Social media feeds, caching systems.                                 |
+| Complexity   | More complex due to strict coordination.                     | Simpler and more scalable.                                           |
+| Trade-off    | More consistent data, but slower operations.                 | Faster operations, but less consistent data.                         |
 
 Okay, let's see a diagram to understand this better.
 
@@ -89,10 +90,11 @@ For a practical example, you can check out my simple implementation using Go and
 
 ## Availability
 
-Availability is a critical concept in distributed systems to ensure that the system is always accessible. 
-Techniques like *redundancy*, *fault tolerance*, *partition tolerance*, and *load balancing* help improve availability in system design.
+Availability is a critical concept in distributed systems to ensure that the system is always accessible.
+Techniques like _redundancy_, _fault tolerance_, _partition tolerance_, and _load balancing_ help improve availability in system design.
 
 Availability is usually measured by uptime percentage:
+
 - 99% (Two Nines) → ~3.65 days of downtime per year
 - 99.9% (Three Nines) → ~8.76 hours of downtime per year
 - 99.99% (Four Nines) → ~52.6 minutes of downtime per year
@@ -102,7 +104,7 @@ Availability is usually measured by uptime percentage:
 
 Partition Tolerance means that a distributed system can keep working even if there are network partitions.
 
-A network partition happens when the connection between nodes or data centers is lost. 
+A network partition happens when the connection between nodes or data centers is lost.
 Systems with Partition Tolerance can still serve users and prevent data loss even when this happens.
 
 <pre class="mermaid">
@@ -120,23 +122,24 @@ graph TD;
 
 - **A (Client Request)**: Represents a user request.
 - **B and C (Server 1 & Server 2)**: Two different servers.
-- **Network Partition**: The connection between servers is lost. 
-If **B** and **C** can still respond, it means the system is **Partition Tolerant**.
+- **Network Partition**: The connection between servers is lost.
+  If **B** and **C** can still respond, it means the system is **Partition Tolerant**.
 
 ## Latency
 
-Latency is the time between sending a request and receiving a response. In other words, 
+Latency is the time between sending a request and receiving a response. In other words,
 it is the time it takes for data to travel from one point to another.
 Generally, it is measured in milliseconds.
 
 ## Durability
-Durability means that data is stored permanently and does not get lost. 
+
+Durability means that data is stored permanently and does not get lost.
 If data is successfully written, it will not disappear even if the system crashes.
 To keep data safe, a distributed system can use methods like copying data (replication) and saving backups.
 
 ## Fault Tolerance
 
-Fault Tolerance means a system can keep working even if some parts fail. 
+Fault Tolerance means a system can keep working even if some parts fail.
 If a server crashes, the network goes down, or hardware breaks, the system should still provide service.
 
 It might sound more like the concept of Availability.
@@ -148,7 +151,7 @@ A Fault Tolerant system usually has high Availability, but a high Availability s
 
 ## Scalability
 
-Scalability is a system’s ability to handle more load and users while keeping good performance. 
+Scalability is a system’s ability to handle more load and users while keeping good performance.
 This means the system should stay fast and work smoothly as demand increases.
 
 ### Vertical Scaling
@@ -184,6 +187,7 @@ In the next chapter, I will discuss Distributed System Theorems.
 ## References
 
 And further reading:
+
 - [System Design Guide for Software Professionals](https://www.packtpub.com/en-us/product/system-design-guide-for-software-professionals-9781805124993), Dhirendra Sinha, Tejas Chopra
 - [Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/), Martin Kleppmann
 - [Replicated Data Consistency Explained Through Baseball](https://www.microsoft.com/en-us/research/wp-content/uploads/2011/10/ConsistencyAndBaseballReport.pdf), Eric Brewer

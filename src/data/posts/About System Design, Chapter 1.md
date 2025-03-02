@@ -1,13 +1,13 @@
 ---
-title: 'About System Design, Chapter 1'
+title: "About System Design, Chapter 1"
 pubDate: 2025-01-18
-description: 'This is the first chapter of my blog series, About System Design. I highlighted, summarized, and gave examples of the essential techniques for building scalable and resilient software systems.'
+description: "This is the first chapter of my blog series, About System Design. I highlighted, summarized, and gave examples of the essential techniques for building scalable and resilient software systems."
 image:
-    src: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    alt: 'The accompanying image represents the building blocks of system design, symbolized through Lego blocks.'
-    createdBy: 'Xavi Cabrera'
-    creatorLink: 'https://unsplash.com/photos/yellow-red-blue-and-green-lego-blocks-kn-UmDZQDjM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash'
-tags: ['System Design', 'Software Architecture', 'en']
+  src: "https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  alt: "The accompanying image represents the building blocks of system design, symbolized through Lego blocks."
+  createdBy: "Xavi Cabrera"
+  creatorLink: "https://unsplash.com/photos/yellow-red-blue-and-green-lego-blocks-kn-UmDZQDjM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+tags: ["System Design", "Software Architecture", "en"]
 ---
 
 ## Table of Contents
@@ -29,7 +29,6 @@ tags: ['System Design', 'Software Architecture', 'en']
     - [Code Optimization](#code-optimization)
 - [Conclusion](#conclusion)
 
-
 ## Introduction
 
 I’ve tried to present the basic concepts of system design more clearly and practically. I drew on the book [System Design Guide for Software Professionals](https://www.packtpub.com/en-us/product/system-design-guide-for-software-professionals-9781805124993) as well as my own experiences and ideas. I aimed to approach these concepts from a useful perspective.
@@ -44,13 +43,13 @@ In this section, we will explore the foundational elements of system design. You
 
 ![System Design](https://www.dropbox.com/scl/fi/v6nztixac4u77ruer98rk/About-System-Design-Chapter-1.png?rlkey=seunng0i4ctvx0h6j8vsvnuz5&st=2yhvz0ia&raw=1)
 
-### Software Systems 
+### Software Systems
 
 Software systems are composed of components and modules that work together to perform specific tasks. They handle operations like user input processing, data storage, and communication between system parts.
 
 For example, an e-commerce platform consists of components such as user interfaces, payment gateways, and inventory management systems, all working together to provide a seamless shopping experience.
 
-### Understanding System Design 
+### Understanding System Design
 
 System design is the process of creating a plan for a software system by defining its architecture, components, and interactions to meet specific requirements. For example, designing an e-commerce system involves integrating components like product catalogs, user authentication, and payment processing to create a seamless shopping experience. This process transforms requirements into a clear structure for implementation and maintenance.
 
@@ -63,9 +62,7 @@ Key steps in system design include:
 - **API design:** Developing APIs for smooth communication between frontend and backend.
 - **Database design:** Choosing data storage solutions, either relational or NoSQL, based on system needs.
 
-
 There are essentially two types of system design: high-level system design (architectural design) and low-level system design (detailed design).
-
 
 ### High-Level System Design
 
@@ -81,6 +78,7 @@ Types of System Architecture:
 - **Event-Driven:** An architecture where components interact by producing and consuming asynchronous events or messages. This design is highly scalable and decoupled, but debugging and ensuring message delivery can be more complex.
 
 Key Considerations:
+
 - **Scalability:** Can the architecture handle growth in users, data, and functionality effectively?
 - **Maintainability:** How easy is it to modify, debug, or enhance the system over time?
 - **Reliability:** Does the architecture support uptime, fault tolerance, and resilience?

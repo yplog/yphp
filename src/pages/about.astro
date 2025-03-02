@@ -1,55 +1,73 @@
 ---
+import { Image } from "astro:assets";
+import profileImage from "../../public/profile.jpg";
 import Layout from "../layouts/BaseLayout.astro";
 import InlineLink from "../components/InlineLink.astro";
 import Contact from "../components/Contact.astro";
 
-const title = 'About'
+const title = "About";
 ---
 
 <Layout title={title}>
-    <main class="space-y-4">
-        <h1 class="text-5xl text-h1-text">
-            I’m Yalın Pala. <br />
-            I live in Ankara, Turkey.
-        </h1>
+  <main class="space-y-4">
+    <div
+      class="flex flex-col md:flex-row items-start md:items-center gap-8 mb-8"
+    >
+      <h1 class="text-5xl text-h1-text">
+        I'm Yalın Pala. <br />
+        I live in Ankara, Turkey.
+      </h1>
+      <Image 
+        src={profileImage}
+        alt="Yalın Pala"
+        class="w-40 h-40 rounded-full object-cover shadow-md"
+        loading="eager"
+      />
+    </div>
 
-        <p class="text-2xl text-h2-text font-light">
-            I'm currently working at
-            <InlineLink href="https://www.linkedin.com/company/netta-tech" content="Netta Tech" />
-            as a software developer.
-            I’m passionate about building and creating,
-            and I've developed my skills through my own curiosity.
-        </p>
-        <p class="text-2xl text-h2-text font-light">
-            Throughout my career, I have worked on various freelance projects;
-            for the past five years,
-            I’ve been working full-time and am currently employed at Netta Tech.
-            I have a deep interest in Free and Open Source Software (FOSS) and contribute to open-source projects whenever possible.
-            I have been a member of <InlineLink href="https://www.fsf.org/" content="FSF" /> since 2015 and in the same years
-            I became the founder of <InlineLink href="https://www.pm.org/groups/649.html" content="Perl Mongers Ankara" />.
-            In addition to my expertise in JavaScript and TypeScript, I also have hands-on experience with Ruby on Rails, Rust, Go.
-        </p>
+    <p class="text-2xl text-h2-text font-light">
+      I'm currently working at
+      <InlineLink
+        href="https://www.linkedin.com/company/netta-tech"
+        content="Netta Tech"
+      />
+      as a software developer. I'm passionate about building and creating, and I've
+      developed my skills through my own curiosity.
+    </p>
+    <p class="text-2xl text-h2-text font-light">
+      Throughout my career, I have worked on various freelance projects; for the
+      past five years, I've been working full-time and am currently employed at
+      Netta Tech. I have a deep interest in Free and Open Source Software (FOSS)
+      and contribute to open-source projects whenever possible. I have been a
+      member of <InlineLink href="https://www.fsf.org/" content="FSF" /> since 2015
+      and in the same years I became the founder of <InlineLink
+        href="https://www.pm.org/groups/649.html"
+        content="Perl Mongers Ankara"
+      />. In addition to my expertise in JavaScript and TypeScript, I also have
+      hands-on experience with Ruby on Rails, Rust, Go.
+    </p>
 
-        <p class="text-2xl text-h2-text font-light">
-            I'm also a big fan of role-playing games,
-            I love playing indie games and even developing games whenever I can.
-            I like to read comics and I have a collection, even if it's not a big one.
-        </p>
+    <p class="text-2xl text-h2-text font-light">
+      I'm also a big fan of role-playing games, I love playing indie games and
+      even developing games whenever I can. I like to read comics and I have a
+      collection, even if it's not a big one.
+    </p>
 
-        <p class="text-2xl text-h2-text font-light pt-6">
-            For a more detailed look at my projects, work experience, and technical skills,
-            feel free to check out my CV(
-            <InlineLink content="PDF" href="/assets/resume.pdf" />,
-            <InlineLink content="HTML" href="/assets/resume.html" />
-            ).
-        </p>
+    <p class="text-2xl text-h2-text font-light pt-6">
+      For a more detailed look at my projects, work experience, and technical
+      skills, feel free to check out my CV(
+      <InlineLink content="PDF" href="/assets/resume.pdf" />,
+      <InlineLink content="HTML" href="/assets/resume.html" />
+      ).
+    </p>
 
-        <p class="text-2xl text-h2-text font-light pt-6">
-            Also you can reach me on:
-        </p>
-        <Contact />
-        <p class="text-2xl text-h2-text font-light">
-            If they are not enough please ask via any of the other contact methods first.
-        </p>
-    </main>
+    <p class="text-2xl text-h2-text font-light pt-6">
+      Also you can reach me on:
+    </p>
+    <Contact />
+    <p class="text-2xl text-h2-text font-light">
+      If they are not enough please ask via any of the other contact methods
+      first.
+    </p>
+  </main>
 </Layout>

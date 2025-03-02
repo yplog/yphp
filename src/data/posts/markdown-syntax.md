@@ -319,6 +319,7 @@ Use the `printf()` function.
 ### Mermaid Diagrams
 
 Here is one mermaid diagram:
+
 <pre class="mermaid">
   graph TD
   A[Client] --> B[Load Balancer]
