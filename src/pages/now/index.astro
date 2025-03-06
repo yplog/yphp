@@ -61,16 +61,16 @@ const { lastUpdated, focus, work, learning, entertainment, reading } = now;
       </section>
 
       <section>
-        <h2 class="text-2xl font-semibold text-h1-text">
-          Reading
-          <InlineLink
-            href={reading.goodreads.currentlyReading}
-            content="*"
-            target="_blank"
-          />
-        </h2>
+        <h2 class="text-2xl font-semibold text-h1-text">Reading</h2>
         <p class="text-xl text-h2-text font-light">
-          I'm currently reading <strong>{reading.book}</strong>.
+          I'm currently reading <strong
+            >{reading.book}
+            <InlineLink
+              href={reading.goodreads.currentlyReading}
+              content="*"
+              target="_blank"
+            /></strong
+          >.
         </p>
         <p class="text-xl text-h2-text font-light">
           You can check out my <InlineLink
