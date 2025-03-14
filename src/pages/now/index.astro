@@ -48,12 +48,13 @@ const { lastUpdated, focus, work, learning, entertainment, reading } = now;
           Playing <strong>{entertainment.game}</strong>.
         </p>
         <p class="text-xl text-h2-text font-light">
-          {
-            entertainment.series == "-"
-              ? "I haven't been watching much these days"
-              : `Watching <strong>${entertainment.series}</strong>`
-          }
-          .
+          <strong
+            >{
+              entertainment.series == "-"
+                ? "I haven't been watching much these days."
+                : `Watching ${entertainment.series}.`
+            }
+          </strong>
         </p>
         <p class="text-xl text-h2-text font-light">
           Listening to <strong>{entertainment.music}</strong>.
@@ -63,14 +64,12 @@ const { lastUpdated, focus, work, learning, entertainment, reading } = now;
       <section>
         <h2 class="text-2xl font-semibold text-h1-text">Reading</h2>
         <p class="text-xl text-h2-text font-light">
-          I'm currently reading <strong
-            >{reading.book}
-            <InlineLink
-              href={reading.goodreads.currentlyReading}
-              content="*"
-              target="_blank"
-            /></strong
-          >.
+          I'm currently reading<InlineLink
+            href={reading.goodreads.currentlyReading}
+            content="*"
+            target="_blank"
+          />
+          <strong>{reading.book} </strong>.
         </p>
         <p class="text-xl text-h2-text font-light">
           You can check out my <InlineLink
