@@ -57,7 +57,13 @@ const { lastUpdated, focus, work, learning, entertainment, reading } = now;
           </strong>
         </p>
         <p class="text-xl text-h2-text font-light">
-          Listening to <strong>{entertainment.music}</strong>.
+          <strong
+            >{
+              entertainment.music == "-"
+                ? "My music taste has been quite varied lately."
+                : `Listening to ${entertainment.music}.`
+            }</strong
+          >
         </p>
       </section>
 
@@ -82,7 +88,7 @@ const { lastUpdated, focus, work, learning, entertainment, reading } = now;
     </div>
 
     <p class="text-xl text-h2-text font-light mt-8">
-      * This page is inspired by Derek Siver’s
+      * This page is inspired by Derek Siver's
       <InlineLink
         href="https://sivers.org/now"
         content="now page suggestion"
