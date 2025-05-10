@@ -26,9 +26,8 @@ A Merkle tree is a way to check if data has changed. It works by turning each pi
 
 ## Building the Merkle Watcher
 
-To see how Merkle trees work in practice, we’ll build a simple example using Go. In this example, we’ll watch a folder and calculate its Merkle root based on the contents of its files. If any file changes, the Merkle root will change too—showing us that something inside the folder has been updated.
-
- 
+To see how Merkle trees work in practice, we’ll build a simple example using Go. In this example, we’ll watch a folder and calculate its Merkle root based on the contents of its files. If any file changes, the Merkle root will change too—showing us that something inside the folder has been updated. 
+You can find the full source code on [GitHub](https://github.com/yplog/tracing-folder-changes-with-merkle-tree).
 
 ### Folder Structure and Merkle Tree Overview
 
