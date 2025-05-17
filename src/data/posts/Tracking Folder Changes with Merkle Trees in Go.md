@@ -190,6 +190,8 @@ func NewMerkleTree(dataBlocks [][]byte) *MerkleTree {
 This function builds the tree from bottom up, pairing nodes and hashing them recursively.
 If there’s an odd number of nodes at any level, the last node is duplicated to maintain a balanced structure.
 
+With these core components in place, our Merkle tree implementation can efficiently track changes to any files in the watched folder. There are certainly many different and more optimized ways to implement this functionality, but the main purpose of this exercise is to understand the Merkle tree concept and see it in action with a practical example.
+
 ## Wrapping Up
 
 In this post, we explored how Merkle trees work by building a simple tool in Go that watches a folder and computes a Merkle root from its file contents. Along the way, we walked through how the tree is constructed, how it detects changes efficiently, how to generate and verify Merkle proofs for specific data, and how to visualize the full tree structure.

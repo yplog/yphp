@@ -45,7 +45,13 @@ const { lastUpdated, focus, work, learning, entertainment, reading } = now;
       <section>
         <h2 class="text-2xl font-semibold text-h1-text">Entertainment</h2>
         <p class="text-xl text-h2-text font-light">
-          Playing <strong>{entertainment.game}</strong>.
+          <strong
+            >{
+              entertainment.game == "-"
+                ? "I haven't been playing any games these days."
+                : `Playing ${entertainment.game}.`
+            }
+          </strong>
         </p>
         <p class="text-xl text-h2-text font-light">
           <strong
