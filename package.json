@@ -25,5 +25,8 @@
   "devDependencies": {
     "prettier": "3.5.2",
     "prettier-plugin-astro": "0.14.1"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
