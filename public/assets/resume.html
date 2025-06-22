@@ -1,175 +1,175 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
-
+	<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width, user-scalable=no, minimal-ui'>
+	
   <title>Yalın Pala</title>
 
-  <style>
-    body {
-      background: #EEEEEE;
-      font: 13px "Times New Roman", Times, sans-serif;
-      line-height: 1.4;
-      margin: 40px 0;
-    }
-    em {
-      color: #999;
-    }
-    p {
-      line-height: 1.4;
-    }
-    ul {
-      margin-bottom: 0;
-    }
-    li {
-      margin-bottom: 2px;
-    }
-    a {
-      text-decoration: none;
-    }
+	<style>
+	body {
+  background: #EEEEEE;
+  font: 13px "Times New Roman", Times, sans-serif;
+  line-height: 1.4;
+  margin: 40px 0;
+}
+em {
+  color: #999;
+}
+p {
+  line-height: 1.4;
+}
+ul {
+  margin-bottom: 0;
+}
+li {
+  margin-bottom: 2px;
+}
+a {
+  text-decoration: none;
+}
 
-    #resume {
-      margin: 0 auto;
-      max-width: 600px;
-      padding: 80px 100px;
-      background: #fff;
-      border: 1px solid #ccc;
-      box-shadow: 2px 2px 4px #aaa;
-      -webkit-box-shadow: 2px 2px 4px #aaa;
-    }
+#resume {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 80px 100px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px #aaa;
+  -webkit-box-shadow: 2px 2px 4px #aaa;
+}
 
-    .coursesList {
-      vertical-align: top;
-      display: inline-block;
-    }
+.coursesList {
+  vertical-align: top;
+  display: inline-block;
+}
 
-    .largeFont {
-      font-size: 20px;
-    }
+.largeFont {
+  font-size: 20px;
+}
 
-    .smallFont {
-      font-size: 13px;
-    }
+.smallFont {
+  font-size: 13px;
+}
 
-    .sectionBlock {
-      display: flex;
-      width: 100%;
-    }
+.sectionBlock {
+  display: flex;
+  width: 100%;
+}
 
-    .sectionName {
-      width: 18%;
-      vertical-align: top;
-      display: inline-block;
-    }
+.sectionName {
+  width: 18%;
+  vertical-align: top;
+  display: inline-block;
+}
 
-    .sectionContent {
-      width: 80%;
-      vertical-align: top;
-      display: inline-block;
-    }
+.sectionContent {
+  width: 80%;
+  vertical-align: top;
+  display: inline-block;
+}
 
-    .sectionContent ul {
-      padding-left: 20px;
-      margin-top: 6px;
-      list-style-type: circle;
-    }
+.sectionContent ul {
+  padding-left: 20px;
+  margin-top: 6px;
+  list-style-type: circle;
+}
 
-    .sectionContent .title {
-      font-weight: bold;
-    }
+.sectionContent .title {
+  font-weight: bold;
+}
 
-    .sectionContent .date {
-      float: right;
-    }
+.sectionContent .date {
+  float: right;
+}
 
-    .sectionContent .separator {
-      height: 14px;
-    }
+.sectionContent .separator {
+  height: 14px;
+}
 
-    .sectionLine {
-      border-style: dashed;
-      border-width: 1px;
-      border-color: #CFCFCF;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
+.sectionLine {
+  border-style: dashed;
+  border-width: 1px;
+  border-color: #CFCFCF;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
-    .divider {
-      font-weight: bold;
-      margin-left: 5px;
-      margin-right: 5px;
-    }
+.divider {
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+}
 
-    .summary {
-      margin-top: 6px;
-    }
+.summary {
+  margin-top: 6px;
+}
 
-    .skillBlock {
-      margin-bottom: 4px;
-    }
+.skillBlock {
+  margin-bottom: 4px;
+}
 
-    .jobBlock {
-      page-break-inside: avoid;
-    }
+.jobBlock {
+  page-break-inside: avoid;
+}
 
-    /* Media Queries */
-    @media only screen and (max-width: 40em) {
-      body {
-        margin: 0;
-        font-size: 14px;
-      }
-      #resume {
-        margin: 0 auto;
-        max-width: 600px;
-        padding: 0.5em 1em;
-        border: none;
-      }
-      .sectionBlock {
-        flex-direction: column;
-      }
-      .sectionContent {
-        width: 100%;
-      }
-      .sectionContent .date {
-        padding-right: 2em;
-      }
-      .sectionName {
-        width: auto;
-      }
-      .largeFont {
-        font-size: 20px;
-      }
-      .smallFont {
-        font-size: 14px;
-      }
-    }
+/* Media Queries */
+@media only screen and (max-width: 40em) {
+  body {
+    margin: 0;
+    font-size: 14px;
+  }
+  #resume {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0.5em 1em;
+    border: none;
+  }
+  .sectionBlock {
+    flex-direction: column;
+  }
+  .sectionContent {
+    width: 100%;
+  }
+  .sectionContent .date {
+    padding-right: 2em;
+  }
+  .sectionName {
+    width: auto;
+  }
+  .largeFont {
+    font-size: 20px;
+  }
+  .smallFont {
+    font-size: 14px;
+  }
+}
 
-    @media print {
-      body {
-        background: #FFFFFF;
-      }
-      #resume {
-        margin: 0 auto;
-        max-width: 600px;
-        padding: 0px 0px;
-        border: 0px;
-        background: #fff;
-        box-shadow: none;
-        -webkit-box-shadow: none;
-      }
+@media print {
+  body {
+    background: #FFFFFF;
+  }
+  #resume {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 0px 0px;
+    border: 0px;
+    background: #fff;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
 
-      a {
-        color: black;
-      }
-    }
+  a {
+    color: black;
+  }
+}
 
-  </style>
+	</style>
 
-</head>
-<body>
+	</head>
+	<body>
 
-<div id='resume'>
+	<div id='resume'>
   <div id='nameBlock' class='largeFont'>
     <span class='name'>
       Yalın Pala,
@@ -181,25 +181,25 @@
       <span class='email'>yalinpala@protonmail.com</span>
       <span class='divider'>|</span>
       <span class='phone'>(+90) 542 523 18 27</span>
-      <span class='divider'>|</span>
-      <span class='address'>
+        <span class='divider'>|</span>
+        <span class='address'>
           Ankara, Turkey
         </span>
     </div>
-    <div id='profilesBlock'>
+      <div id='profilesBlock'>
             <span class='url'>
-              <a href='https://yalinpala.dev'>https://yalinpala.dev</a>
+              <a href='https://yalinpala.dev'>https://yalinpala.dev</a> 
             </span>
-      <span class='divider'>|</span>
-      <span class='url'>
-              <a href='https://github.com/yplog'>Github</a> yplog
+            <span class='divider'>|</span>
+            <span class='url'>
+              <a href='https://github.com/yplog'>GitHub</a> yplog
             </span>
-      <span class='divider'>|</span>
-      <span class='url'>
-              <a href='https://www.linkedin.com/in/yal%C4%B1n-pala-2426a3219/'>Linkedin</a> Yalın Pala
+            <span class='divider'>|</span>
+            <span class='url'>
+              <a href='https://www.linkedin.com/in/yalin-pala/'>LinkedIn</a> yalin-pala
             </span>
-
-    </div>
+            
+      </div>
   </div>
   <div class='sectionLine'></div>
 
@@ -208,7 +208,7 @@
       <span>SUMMARY</span>
     </div>
     <div class='sectionContent'>
-      <span>Software Developer with hands-on experience designing, developing, and implementing applications and solutions using a range of technologies and programming languages. </span>
+      <span>Software Developer focused on building robust, scalable backend systems using Go, Node.js, and modern infrastructure tools. Strong advocate of open-source and clean architecture, with a passion for performance, reliability, and simplicity in software design.</span>
     </div>
   </div>
   <div class='sectionLine'></div>
@@ -218,53 +218,70 @@
       <span>EXPERIENCE</span>
     </div>
     <div class='sectionContent'>
-      <div class="jobBlock">
-        <div class='blockHeader'>
+			<div class="jobBlock">
+	      <div class='blockHeader'>
+	        <span class='title'>
+	          Netta Tech - Software Developer
+	        </span>
+	        <span class='date'>
+	          2023 &mdash; Present
+	        </span>
+	      </div>
+	      <div><a href='https://nettasoftware.com/'>https://nettasoftware.com/</a></div>
+	      <ul class='highlights'>
+	        <li>Providing global software solutions with a focus on backend development.</li>
+	      </ul>
+	      <ul class='details'>
+	        <li>Worked as a Backend Developer on various projects.</li>
+	        <li>Contributed to Dockerized deployments and CI/CD pipelines.</li>
+	        <li>Tech Stack: <em>[TypeScript, Nodejs, Postgresql, MongoDB, Redis, RabbitMQ, Docker, Go, NestJS]</em></li>
+	      </ul>
+	      <div class='separator'></div>
+			</div>
+			<div class="jobBlock">
+	      <div class='blockHeader'>
 	        <span class='title'>
 	          Anayurt Teknoloji - Software Developer
 	        </span>
-          <span class='date'>
-	          2021 &mdash; Present
+	        <span class='date'>
+	          2021 &mdash; 2023
 	        </span>
-        </div>
-        <div><a href='https://www.anayurtteknoloji.com/'>https://www.anayurtteknoloji.com/</a></div>
-        <ul class='highlights'>
-          <li>Anayurt Teknoloji specializes in wireless communication, signal processing algorithms, communication protocols and software, RF digital PCB designs, recording in HF/VHF/UHF frequency bands, spectrum tracking systems, corporate software solutions.</li>
-        </ul>
-        <ul class='details'>
-          <li>I work as a Backend, Frontend, Mobile and Full Stack developer in various projects.</li>
-          <li>In the Backend, I usually work with Mongodb or Postgresql as a database. Besides, I work with Express and Nest.  <em>[TypeScript, Nodejs, Postgresql, MongoDB, Docker]</em></li>
-          <li>In the Frontend, I work with React, Nextjs <em>[Javascript, React, Nextjs]</em></li>
-          <li>In the Mobile, I work with React Native <em>[React Native]</em></li>
-          <li>We use Jira and Git for job tracking and Agile methodology. <em>[Jira, Git, Agile]</em></li>
-        </ul>
-        <div class='separator'></div>
-      </div>
-      <div class="jobBlock">
-        <div class='blockHeader'>
+	      </div>
+	      <div><a href='https://www.anayurtteknoloji.com/'>https://www.anayurtteknoloji.com/</a></div>
+	      <ul class='highlights'>
+	        <li>Focused on communication systems, spectrum analysis, and enterprise software solutions.</li>
+	      </ul>
+	      <ul class='details'>
+	        <li>Contributed to multiple projects as a Full Stack developer.</li>
+	        <li>Tech Stack: <em>[TypeScript, Nodejs, Postgresql, MongoDB, NestJS, React, Nextjs, React Native]</em></li>
+	      </ul>
+	      <div class='separator'></div>
+			</div>
+			<div class="jobBlock">
+	      <div class='blockHeader'>
 	        <span class='title'>
 	          NYKS Software - Software Developer
 	        </span>
-          <span class='date'>
+	        <span class='date'>
 	          2020 &mdash; 2021
 	        </span>
-        </div>
-        <div><a href='https://nykssoft.com'>https://nykssoft.com</a></div>
-        <ul class='highlights'>
-          <li>Nyks Software is a software company that offers e-commerce, online education and automation solutions.</li>
-        </ul>
-        <ul class='details'>
-          <li>I worked as a Full Stack developer.</li>
-          <li>I used React, React Native and Nodejs extensively in our projects.  <em>[React, React Native, Docker, Nodejs]</em></li>
-        </ul>
-
-      </div>
+	      </div>
+	      <div><a href='https://nykssoft.com'>https://nykssoft.com</a></div>
+	      <ul class='highlights'>
+	        <li>Delivered e-commerce, ed-tech, and automation projects for various clients.</li>
+	      </ul>
+	      <ul class='details'>
+	        <li>Worked as a Full Stack Developer.</li>
+	        <li>Tech Stack: <em>[Nodejs, Postgresql, MongoDB, React, React Native, Docker]</em></li>
+	      </ul>
+	      
+			</div>
     </div>
   </div>
   <div class='sectionLine'></div>
 
 
-  <div id='awards' class="sectionBlock">
+	<div id='awards' class="sectionBlock">
     <div class='sectionName'>
       <span>CERTIFICATES</span>
     </div>
@@ -278,7 +295,7 @@
         </span>
       </div>
       <ul class='highlights'>
-        <li>Computer systems and constructions, Programming with Java, Operating systems, Data structures and algorithms, Database systems, Software Engineering</li>
+        <li>Covered software engineering fundamentals including programming, data structures, databases, operating systems, and Java.</li>
       </ul>
       <div class='separator'></div>
       <div class='blockHeader'>
@@ -290,16 +307,16 @@
         </span>
       </div>
       <ul class='highlights'>
-        <li>.NET development fundamentals, Programming in C#, SQL Server, ASP.NET Api/MVC, Angular, Cordova</li>
+        <li>Trained in .NET technologies, including C#, SQL Server, ASP.NET, Angular, and Cordova.</li>
       </ul>
-
+      
     </div>
-  </div>
+	</div>
   <div class='sectionLine'></div>
 
 
 
-  <div id='education' class="sectionBlock">
+	<div id='education' class="sectionBlock">
     <div class='sectionName'>
       <span>EDUCATION</span>
     </div>
@@ -312,7 +329,7 @@
           2024 &mdash; Present
         </span>
         <div class=''>
-          Master of Science - MS  - Computer Science
+          Master of Science - MS  - Computer Science 
         </div>
       </div>
       <div class='separator'></div>
@@ -324,11 +341,11 @@
           2021 &mdash; 2024
         </span>
         <div class=''>
-          Master of Engineering - MEng  - Engineering/Industrial Management
+          Master of Engineering - MEng  - Engineering/Industrial Management 
         </div>
         <div id='coursesBlock'>
           <ul class='coursesList'>
-            <li class='course'>Program discontinued to pursue a Master&#x27;s degree in Computer Science at University of Colorado Boulder.</li>
+            <li class='course'>Discontinued the program to pursue a Master&#x27;s degree in Computer Science at the University of Colorado Boulder.</li>
           </ul>
           <ul class='coursesList'>
           </ul>
@@ -339,17 +356,17 @@
       <div class='separator'></div>
       <div class='educationBlock'>
         <span class='title'>
-          Bartın University
+          Bartın University 
         </span>
         <span class='date'>
           2011 &mdash; 2018
         </span>
         <div class=''>
-          Bachelor of Engineering   - Material Engineering
+          Bachelor of Engineering   - Material Engineering 
         </div>
         <div id='coursesBlock'>
           <ul class='coursesList'>
-            <li class='course'>Graduation Thesis - Solar Energy Harvesting With Nanoantennas</li>
+            <li class='course'>Graduation thesis: Solar Energy Harvesting with Nanoantennas</li>
           </ul>
           <ul class='coursesList'>
           </ul>
@@ -357,13 +374,13 @@
           </ul>
         </div>
       </div>
-
+      
     </div>
-  </div>
+	</div>
   <div class='sectionLine'></div>
 
 
-  <div id='languages' class="sectionBlock">
+	<div id='languages' class="sectionBlock">
     <div class='sectionName'>
       <span>LANGUAGES</span>
     </div>
@@ -372,28 +389,28 @@
       <span class='fluency'><em>(Native speaker)</em></span>
       <span>,</span>
       <span class='language'>English</span>
-      <span class='fluency'><em>(Intermediate, B1)</em></span>
-
+      <span class='fluency'><em>(Upper Intermediate (B2))</em></span>
+      
     </div>
     <div class='sectionLine'></div>
-  </div>
+	</div>
 
-  <div id='interests' class="sectionBlock">
+	<div id='interests' class="sectionBlock">
     <div class='sectionName'>
       <span>INTERESTS</span>
     </div>
     <div class='sectionContent'>
-      <span class='name'>Organizations</span><!--
+      <span class='name'>Organizations:</span><!--
       --><span class='keywords'> <em>[
-        Free Software Foundation - Member<!--
-        -->,
-        Perl Mongers Ankara - Founder<!--
+        Member of the Free Software Foundation (since 2015)<!--
+        -->, 
+        Founder of Perl Mongers Ankara<!--
         -->
       ]</em></span><!--
       -->
     </div>
     <div class='sectionLine'></div>
-  </div>
+	</div>
 
-</body>
+	</body>
 </html>
