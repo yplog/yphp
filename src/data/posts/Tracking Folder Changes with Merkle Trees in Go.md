@@ -7,7 +7,7 @@ image:
   alt: "Tree in Rome"
   createdBy: "Jeroen den Otter"
   creatorLink: "https://unsplash.com/@jeroendenotter"
-tags: ["go", "merkle-tree", "file-watching"]
+tags: ["go", "merkle-tree", "file-watching", "en"]
 draft: false
 ---
 

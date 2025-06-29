@@ -7,7 +7,7 @@ image:
     alt: "Ghost"
     createdBy: "Bertrand Colombo"
     creatorLink: "https://unsplash.com/@beberinho"
-tags: ["Bloom Filters", "System Design", "en"]
+tags: ["Bloom Filters", "System Design", "redis", "go", "en"]
 draft: false
 ---
 
