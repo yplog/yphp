@@ -41,11 +41,93 @@
   }
 
   .markdown-content pre {
-    @apply bg-gray-900 rounded-lg p-4 my-4 overflow-x-auto;
+    @apply bg-gray-900 rounded-lg p-6 my-6 overflow-x-auto border border-gray-700 shadow-lg;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    position: relative;
+  }
+
+  .markdown-content pre code {
+    @apply bg-transparent p-0 text-gray-100;
+    font-size: inherit;
+    border-radius: 0;
   }
 
   .markdown-content code {
-    @apply bg-gray-800 rounded px-1 py-0.5 text-h1-text;
+    @apply bg-gray-800 rounded px-2 py-1 text-yellow-300 border border-gray-600;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+    font-size: 0.85rem;
+  }
+
+  .markdown-content pre:hover {
+    @apply border-gray-600;
+    transition: border-color 0.2s ease;
+  }
+
+  /* Syntax highlighting improvements */
+  .markdown-content pre code .token.comment {
+    color: #6b7280;
+    font-style: italic;
+  }
+
+  .markdown-content pre code .token.keyword {
+    color: #f59e0b;
+    font-weight: bold;
+  }
+
+  .markdown-content pre code .token.string {
+    color: #10b981;
+  }
+
+  .markdown-content pre code .token.function {
+    color: #3b82f6;
+  }
+
+  .markdown-content pre code .token.number {
+    color: #f472b6;
+  }
+
+  .markdown-content pre code .token.operator {
+    color: #f59e0b;
+  }
+
+  .markdown-content pre code .token.punctuation {
+    color: #9ca3af;
+  }
+
+  /* Copy button for code blocks */
+  .markdown-content pre::before {
+    content: attr(data-language);
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: #9ca3af;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* Remove unwanted lines/borders from code blocks */
+  .markdown-content pre,
+  .markdown-content pre[class*="language-"] {
+    box-shadow: none !important;
+  }
+
+  .markdown-content pre code,
+  .markdown-content pre code[class*="language-"] {
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Override Prism.js theme styles that add unwanted decorations */
+  .markdown-content pre[class*="language-"]::before,
+  .markdown-content pre[class*="language-"]::after {
+    display: none !important;
   }
 
   .markdown-content blockquote {
