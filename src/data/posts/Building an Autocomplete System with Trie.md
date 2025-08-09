@@ -7,7 +7,7 @@ image:
   alt: "The Stuttgart library"
   createdBy: "Niklas Ohlrogge"
   creatorLink: "https://unsplash.com/@ohlrogge"
-tags: ["trie", "autocomplete", "typescript"]
+tags: ["trie", "autocomplete", "typescript", "en"]
 draft: false
 ---
 
