@@ -19,6 +19,7 @@ draft: false
 - [Trie Operations](#trie-operations)
 - [Data Model](#data-model)
 - [Implementation](#implementation)
+- [Conclusion](#conclusion)
 - [References](#references)
 
 ## Trie Data Structure
