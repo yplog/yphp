@@ -23,15 +23,15 @@ tags: ["astro", "automation", "javascript"]
 draft: true
 ---
 
+## Table of Contents
+
 - [Introduction](#introduction)
 - [Main Section](#main-section)
   - [Subsection One](#subsection-one)
   - [Subsection Two](#subsection-two)
 - [Conclusion](#conclusion)
 
-# My Blog Post for ${today}
-
-## Main Section
+## Main Section ${today}
 
 Main content goes here.
 
