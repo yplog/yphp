@@ -23,9 +23,29 @@ tags: ["astro", "automation", "javascript"]
 draft: true
 ---
 
+- [Introduction](#introduction)
+- [Main Section](#main-section)
+  - [Subsection One](#subsection-one)
+  - [Subsection Two](#subsection-two)
+- [Conclusion](#conclusion)
+
 # My Blog Post for ${today}
 
-This is the content of the blog post.
+## Main Section
+
+Main content goes here.
+
+### Subsection One
+
+Content for subsection one.
+
+### Subsection Two
+
+Content for subsection two.
+
+## Conclusion
+
+Concluding thoughts.
 `;
 
 fs.writeFileSync(filename, content, { encoding: "utf8" });
