@@ -53,17 +53,37 @@ If a timer is set for 10 seconds:
 - It goes to slot `(current + 10) % 8 = 2`.  
 - But it also remembers it needs **1 full rotation** before execution.
 
+The diagram below shows how different timers are positioned in the wheel. Each timer is placed in a specific slot based on its delay, and longer timers have a "rounds" counter indicating how many full wheel rotations they must wait before execution. The current pointer moves clockwise with each tick.
+
+
 <pre class="mermaid">
-pie
-    title Time Wheel (8 slots)
-    "Slot 0" : 1
-    "Slot 1" : 1
-    "Slot 2" : 1
-    "Slot 3" : 1
-    "Slot 4" : 1
-    "Slot 5" : 1
-    "Slot 6" : 1
-    "Slot 7" : 1
+graph TD
+    subgraph "Time Wheel (8 slots, tick=1s)"
+        A[Slot 0<br/>Current] -.-> B[Slot 1]
+        B --> C[Slot 2<br/>Timer 4<br/>rounds: 1]
+        C --> D[Slot 3<br/>Timer 1<br/>Timer 2<br/>rounds: 0]
+        D --> E[Slot 4]
+        E --> F[Slot 5]
+        F --> G[Slot 6]
+        G --> H[Slot 7]
+        H -.-> A
+    end
+    
+    subgraph "Example Timers"
+        T1["Timer 1: 3s<br/>slot = (0+3) % 8 = 3<br/>rounds = 0"]
+        T2["Timer 2: 3s<br/>slot = (0+3) % 8 = 3<br/>rounds = 0"]
+        T3["Timer 3: 8s<br/>slot = (0+8) % 8 = 0<br/>rounds = 1"]
+        T4["Timer 4: 10s<br/>slot = (0+10) % 8 = 2<br/>rounds = 1"]
+    end
+    
+    T1 --> D
+    T2 --> D
+    T3 --> A
+    T4 --> C
+    
+    style A fill:#e1f5fe
+    style D fill:#fff3e0
+    style C fill:#fff3e0
 </pre>
 
 ## Implementation
