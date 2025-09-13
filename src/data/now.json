@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "Sep 8, 2025 from Ankara, Türkiye",
+  "lastUpdated": "Sep 13, 2025 from Ankara, Türkiye",
   "focus": {
-    "current": "developing a learning application",
+    "current": "developing a new product - this is painfully slow",
     "goal": "to launch a fully functional product",
     "technologies": "Vue, Go, Nodejs, MongoDB, Redis"
   },
@@ -13,12 +13,12 @@
     "topic": "Distributed systems theorems and data structures"
   },
   "entertainment": {
-    "game": "Blasphemous",
+    "game": "-",
     "series": "Mussolini: Son of the Century",
     "music": "-"
   },
   "reading": {
-    "book": "Grokking Simplicity: Taming complex software with functional thinking, Eric Normand",
+    "book": "To Live, Yu Hua",
     "goodreads": {
       "profile": "https://www.goodreads.com/yplog",
       "currentlyReading": "https://www.goodreads.com/review/list/188197017-yal-n-pala?shelf=currently-reading"
