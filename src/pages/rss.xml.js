@@ -8,7 +8,7 @@ export async function GET(context) {
     title: "yp’s Blog",
     description: "Software development and open-source content by yp.",
     site: context.site,
-    items: posts.map((post) => ({
+    items: posts.filter((post) => !post.data.draft).map((post) => ({
       title: post.data.title,
       description: post.data.description,
       pubDate: post.data.pubDate,
