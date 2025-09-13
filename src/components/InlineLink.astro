@@ -13,16 +13,21 @@ const { href, content, target = "_blank" } = Astro.props;
 <style>
   .inline-link {
     color: #f9e79f;
-    transition: color 0.3s ease;
+    text-decoration-line: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 0.15em;
+    text-decoration-skip-ink: auto;
+    transition: color 0.2s ease, text-decoration-thickness 0.2s ease;
   }
 
   .inline-link:hover {
     color: #f7d794;
-    text-decoration: underline;
+    text-decoration-thickness: 2px;
   }
 
-  .inline-link:focus {
-    outline: 2px dashed #f9e79f;
+  .inline-link:focus-visible {
+    outline: 2px dashed currentColor;
     outline-offset: 2px;
   }
 </style>
