@@ -65,7 +65,29 @@ const title = "About";
     <p class="text-2xl text-h2-text font-light pt-6">
       Also you can reach me on:
     </p>
+
     <Contact />
+
+    <div id="gpg-key" class="text-2xl text-h2-text font-light pt-6 space-y-2">
+      <p>
+        For secure communication, you can use my GPG public key, available on{
+          " "
+        }
+        <InlineLink
+          href="https://keys.openpgp.org/search?q=3E1626C270B4BE072C0445691E5AB50549AAFFAE"
+          content="keys.openpgp.org"
+        />
+        or as a direct download:{" "}
+        <InlineLink href="/assets/yalinpala-public.asc" content="public.asc" />.
+      </p>
+      <p>
+        The fingerprint is:{" "}
+        <code class="text-xl font-mono text-gray-600 dark:text-gray-400">
+          3E16 26C2 70B4 BE07 2C04 4569 1E5A B505 49AA FFAE
+        </code>.
+      </p>
+    </div>
+
     <p class="text-2xl text-h2-text font-light">
       If they are not enough please ask via any of the other contact methods
       first.
