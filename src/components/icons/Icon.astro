@@ -1,12 +1,17 @@
 ---
 export interface Props {
-  name: "mastodon" | "linkedin" | "github" | "email" | "gnupg" | "wtfpl";
+  name: "mastodon" | "linkedin" | "github" | "codeberg" | "email" | "gnupg" | "wtfpl";
   width?: string;
   height?: string;
   color?: string;
 }
 
+import CodebergIcon from "./codeberg-logo_icon_white.svg";
+
 const { name, width = "36", height = "36", color = "#d4d4d6" } = Astro.props;
+
+const w = isNaN(Number(width)) ? width : `${width}px`;
+const h = isNaN(Number(height)) ? height : `${height}px`;
 
 const icons = {
   mastodon: {
@@ -45,26 +50,44 @@ const icons = {
 };
 ---
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width={width}
-  height={height}
-  fill="none"
-  viewBox={icons[name].viewBox}
-  role="img"
-  aria-label={`${icons[name].title} icon`}
->
-  <title>{icons[name].title}</title>
-  {
-    name === "wtfpl" ? (
-      icons[name].paths.map((path) => (
-        <path d={path} style={`fill: ${color}; transition: fill 0.3s ease;`} />
-      ))
-    ) : (
-      <path
-        d={icons[name].path}
-        style={`fill: ${color}; transition: fill 0.3s ease;`}
-      />
-    )
-  }
-</svg>
+{
+  name === "codeberg" ? (
+    <div
+      role="img"
+      aria-label="Codeberg icon"
+      style={{
+        width: w,
+        height: h,
+        backgroundColor: color,
+        mask: `url(${CodebergIcon.src}) no-repeat center / contain`,
+        WebkitMask: `url(${CodebergIcon.src}) no-repeat center / contain`,
+        transition: "background-color 0.3s ease",
+      }}
+    />
+  ) : (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      fill="none"
+      viewBox={icons[name].viewBox}
+      role="img"
+      aria-label={`${icons[name].title} icon`}
+    >
+      <title>{icons[name].title}</title>
+      {name === "wtfpl" ? (
+        icons[name].paths.map((path) => (
+          <path
+            d={path}
+            style={`fill: ${color}; transition: fill 0.3s ease;`}
+          />
+        ))
+      ) : (
+        <path
+          d={icons[name].path}
+          style={`fill: ${color}; transition: fill 0.3s ease;`}
+        />
+      )}
+    </svg>
+  )
+}
