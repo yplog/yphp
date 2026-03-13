@@ -1,4 +1,5 @@
 ---
+import "../styles/fonts.css";
 import "../styles/global.css";
 
 import { Image } from "astro:assets";
@@ -29,8 +30,37 @@ const formattedPubDate = formatLocaleDate(new Date(pubDate));
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="yp's home page" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Preload all used Inter weights for faster first paint -->
+    <link
+      rel="preload"
+      href="/fonts/inter/inter-latin-300-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter/inter-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter/inter-latin-500-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter/inter-latin-700-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <meta name="description" content="yp's home page" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <meta name="fediverse:creator" content="@yplog@fosstodon.org" />

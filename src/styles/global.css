@@ -5,5 +5,5 @@
   --color-h1-text: #d4d4d6;
   --color-h2-text: #aaaaaa;
   --color-content-text: #9ca3af;
-  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", "Inter Fallback", ui-sans-serif, system-ui, sans-serif;
 }
