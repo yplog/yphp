@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 import { Image } from "astro:assets";
 import MarkdownStyles from "../styles/markdown.astro";
 import { formatLocaleDate } from "../helpers/date";
@@ -63,6 +65,9 @@ const formattedPubDate = formatLocaleDate(new Date(pubDate));
     }
 
     <title>{title}</title>
+    <style is:inline>
+      html, body { background-color: #181a1b; }
+    </style>
   </head>
   <body class="bg-dark-bg">
     <div

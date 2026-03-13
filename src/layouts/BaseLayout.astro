@@ -1,5 +1,6 @@
 ---
 import "../styles/fonts.css";
+import "../styles/global.css";
 
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
@@ -43,6 +44,9 @@ const { title } = Astro.props;
       crossorigin
     />
     <title>{title}</title>
+    <style is:inline>
+      html, body { background-color: #181a1b; }
+    </style>
   </head>
   <body class="bg-dark-bg">
     <div
