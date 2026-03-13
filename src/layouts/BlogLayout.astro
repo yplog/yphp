@@ -1,4 +1,7 @@
 ---
+import "../styles/fonts.css";
+import "../styles/global.css";
+
 import { Image } from "astro:assets";
 import MarkdownStyles from "../styles/markdown.astro";
 import { formatLocaleDate } from "../helpers/date";
@@ -27,8 +30,37 @@ const formattedPubDate = formatLocaleDate(new Date(pubDate));
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="yp's home page" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Preload all used Inter weights for faster first paint -->
+    <link
+      rel="preload"
+      href="/fonts/inter/inter-latin-300-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter/inter-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter/inter-latin-500-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/inter/inter-latin-700-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <meta name="description" content="yp's home page" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <meta name="fediverse:creator" content="@yplog@fosstodon.org" />
@@ -63,6 +95,9 @@ const formattedPubDate = formatLocaleDate(new Date(pubDate));
     }
 
     <title>{title}</title>
+    <style is:inline>
+      html, body { background-color: #181a1b; }
+    </style>
   </head>
   <body class="bg-dark-bg">
     <div
@@ -132,7 +167,7 @@ const formattedPubDate = formatLocaleDate(new Date(pubDate));
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
-    <script type="module">
+    <script type="module" is:inline>
       import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
 
       if (document.getElementsByClassName("mermaid").length > 0) {

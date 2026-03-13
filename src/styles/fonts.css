@@ -1,49 +1,42 @@
-/* Self-hosted Roboto with no visible swap */
+/* Fallback with Inter-like metrics to reduce layout shift when font loads */
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 100;
-  font-display: optional;
-  src: url('/fonts/roboto/roboto-latin-100-normal.woff2') format('woff2');
+  font-family: "Inter Fallback";
+  src: local("Arial");
+  size-adjust: 107%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
 }
 
+/* Self-hosted Inter */
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  font-display: optional;
-  src: url('/fonts/roboto/roboto-latin-300-normal.woff2') format('woff2');
+  font-display: swap;
+  src: url("/fonts/inter/inter-latin-300-normal.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-display: optional;
-  src: url('/fonts/roboto/roboto-latin-400-normal.woff2') format('woff2');
+  font-display: swap;
+  src: url("/fonts/inter/inter-latin-400-normal.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  font-display: optional;
-  src: url('/fonts/roboto/roboto-latin-500-normal.woff2') format('woff2');
+  font-display: swap;
+  src: url("/fonts/inter/inter-latin-500-normal.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-display: optional;
-  src: url('/fonts/roboto/roboto-latin-700-normal.woff2') format('woff2');
+  font-display: swap;
+  src: url("/fonts/inter/inter-latin-700-normal.woff2") format("woff2");
 }
-
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 900;
-  font-display: optional;
-  src: url('/fonts/roboto/roboto-latin-900-normal.woff2') format('woff2');
-}
-
