@@ -5,6 +5,7 @@ export interface Props {
     | "linkedin"
     | "github"
     | "codeberg"
+    | "signal"
     | "email"
     | "gnupg"
     | "wtfpl"
@@ -15,11 +16,15 @@ export interface Props {
 }
 
 import CodebergIcon from "./codeberg-logo_icon_white.svg";
+import SignalIcon from "./signal.svg";
 
 const { name, width = "36", height = "36", color = "#d4d4d6" } = Astro.props;
 
 const codebergSrc =
   typeof CodebergIcon === "string" ? CodebergIcon : CodebergIcon.src;
+
+const signalSrc =
+  typeof SignalIcon === "string" ? SignalIcon : SignalIcon.src;
 
 const w = isNaN(Number(width)) ? width : `${width}px`;
 const h = isNaN(Number(height)) ? height : `${height}px`;
@@ -66,16 +71,16 @@ const icons = {
 ---
 
 {
-  name === "codeberg" ? (
+  name === "codeberg" || name === "signal" ? (
     <div
       role="img"
-      aria-label="Codeberg icon"
+      aria-label={`${name === "codeberg" ? "Codeberg" : "Signal"} icon`}
       style={{
         width: w,
         height: h,
         backgroundColor: color,
-        mask: `url(${codebergSrc}) no-repeat center / contain`,
-        WebkitMask: `url(${codebergSrc}) no-repeat center / contain`,
+        mask: `url(${name === "codeberg" ? codebergSrc : signalSrc}) no-repeat center / contain`,
+        WebkitMask: `url(${name === "codeberg" ? codebergSrc : signalSrc}) no-repeat center / contain`,
         transition: "background-color 0.3s ease",
       }}
     />
