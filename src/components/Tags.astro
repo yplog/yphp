@@ -8,8 +8,10 @@ interface Props {
 const { tags } = Astro.props as Props;
 ---
 
-{
-  tags.map((tag: string) => (
-    <InlineLink href={`/tags/${tag}`} content={`#${tag}`} target="_self" />
-  ))
-}
+<div class="flex flex-wrap gap-2">
+  {
+    tags.map((tag: string) => (
+      <InlineLink href={`/tags/${tag}`} content={`#${tag}`} target="_self" />
+    ))
+  }
+</div>
