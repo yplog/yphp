@@ -8,6 +8,7 @@ import { formatLocaleDate } from "../helpers/date";
 import Header from "../components/Header.astro";
 import Divider from "../components/Divider.astro";
 import Footer from "../components/Footer.astro";
+import Tags from "../components/Tags.astro";
 
 interface Props {
   title: string;
@@ -150,11 +151,9 @@ const formattedPubDate = formatLocaleDate(new Date(pubDate));
 
         {
           tags && tags.length > 0 && (
-            <div class="mt-4">
-              <span class="text-gray-400">Tags: </span>
-              {tags.map((tag: string) => (
-                <span class="text-gray-300 py-1 text-sm"> #{tag}</span>
-              ))}
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <span class="text-gray-400">Tags:</span>
+              <Tags tags={tags} />
             </div>
           )
         }
