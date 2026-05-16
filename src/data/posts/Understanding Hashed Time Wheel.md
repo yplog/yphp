@@ -1,12 +1,12 @@
 ---
-title: 'Understanding Hashed Time Wheel'
+title: "Understanding Hashed Time Wheel"
 pubDate: 2025-09-13
-description: 'A beginner-friendly explanation of the Hashed Time Wheel algorithm for managing timers efficiently.'
+description: "A beginner-friendly explanation of the Hashed Time Wheel algorithm for managing timers efficiently."
 image:
-    src: 'https://images.unsplash.com/photo-1740058893447-59ad4fbe22ba?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    alt: "Musée d'Orsay, Rue de la Légion d'Honneur, Paris, France"
-    createdBy: 'goffredo crollalanza'
-    creatorLink: 'https://unsplash.com/@goffpix'
+  src: "https://images.unsplash.com/photo-1740058893447-59ad4fbe22ba?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  alt: "Musée d'Orsay, Rue de la Légion d'Honneur, Paris, France"
+  createdBy: "goffredo crollalanza"
+  creatorLink: "https://unsplash.com/@goffpix"
 tags: ["timers", "algorithms", "en"]
 draft: false
 ---
@@ -26,35 +26,35 @@ Efficient timer management is critical in networking, scheduling, and distribute
 Traditional approaches often become slow when there are many timers.  
 The **Hashed Time Wheel (HTW)** algorithm solves this by providing a simple yet efficient way to manage thousands of timers.
 
-
 ## Why Do We Need Hashed Time Wheel?
 
-- Managing timers with a priority queue (min-heap) can be **O(log n)** for insertion and deletion.  
-- In high-performance systems (like Netty or Kafka), we need something closer to **O(1)**.  
+- Managing timers with a priority queue (min-heap) can be **O(log n)** for insertion and deletion.
+- In high-performance systems (like Netty or Kafka), we need something closer to **O(1)**.
 - Time wheel algorithms give us this improvement by trading precision for efficiency.
-
 
 ## How Does It Work?
 
 Imagine a clock:
-- Each slot in the wheel represents a small time interval (tick).  
-- Timers are placed into slots based on their expiration time.  
-- When the clock ticks, timers in the current slot are checked and executed.  
+
+- Each slot in the wheel represents a small time interval (tick).
+- Timers are placed into slots based on their expiration time.
+- When the clock ticks, timers in the current slot are checked and executed.
 
 If the timer does not fit into the first round, it waits for multiple rotations.
 
 ### Example
 
 Suppose:
-- Tick = 1 second  
-- Wheel size = 8 slots  
 
-If a timer is set for 10 seconds:  
-- It goes to slot `(current + 10) % 8 = 2`.  
+- Tick = 1 second
+- Wheel size = 8 slots
+
+If a timer is set for 10 seconds:
+
+- It goes to slot `(current + 10) % 8 = 2`.
 - But it also remembers it needs **1 full rotation** before execution.
 
 The diagram below shows how different timers are positioned in the wheel. Each timer is placed in a specific slot based on its delay, and longer timers have a "rounds" counter indicating how many full wheel rotations they must wait before execution. The current pointer moves clockwise with each tick.
-
 
 <pre class="mermaid">
 graph TD
@@ -108,7 +108,7 @@ class HashedTimeWheel {
 
   constructor(
     private tickDuration: number, // in ms
-    private wheelSize: number
+    private wheelSize: number,
   ) {
     this.slots = Array.from({ length: wheelSize }, () => []);
   }
@@ -169,6 +169,7 @@ We implemented a simple Hashed Time Wheel with 8 slots and a tick duration of 1 
 Timers are added with different delays, and the wheel executes them when their time comes.
 
 **Output**
+
 ```sh
 bun run ./index
 tick 0

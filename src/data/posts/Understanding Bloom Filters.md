@@ -1,17 +1,18 @@
 ---
-title: 'Understanding Bloom Filters'
+title: "Understanding Bloom Filters"
 pubDate: 2025-06-29
-description: 'Bloom filters: what they are, how they work, and how we can implement and use them in real systems.'
+description: "Bloom filters: what they are, how they work, and how we can implement and use them in real systems."
 image:
-    src: "https://images.unsplash.com/photo-1577694211890-0d02619e030a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    alt: "Ghost"
-    createdBy: "Bertrand Colombo"
-    creatorLink: "https://unsplash.com/@beberinho"
+  src: "https://images.unsplash.com/photo-1577694211890-0d02619e030a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  alt: "Ghost"
+  createdBy: "Bertrand Colombo"
+  creatorLink: "https://unsplash.com/@beberinho"
 tags: ["Bloom Filters", "System Design", "redis", "go", "en"]
 draft: false
 ---
 
 ## Table of Contents
+
 - [Introduction](#introduction)
 - [What is a Bloom Filter?](#what-is-a-bloom-filter)
 - [How Does It Work?](#how-does-it-work)
@@ -24,7 +25,6 @@ draft: false
   - [Why Use Redis Stack for Bloom Filters?](#why-use-redis-stack-for-bloom-filters)
 - [Using Bloom Filter in Go with Redis Stack](#using-bloom-filter-in-go-with-redis-stack)
 - [Conclusion](#conclusion)
-
 
 ## Introduction
 
@@ -39,6 +39,7 @@ Have you ever needed to check if an item exists in a large set, but wanted to do
 Bloom filters are data structures that help you do exactly that. They can tell you if an item is definitely not in the set or maybe in the set, with very little memory usage and high speed.
 
 In this post, we will:
+
 - Understand how Bloom filters work.
 - Implement a simple Bloom filter in code.
 - See how Redis uses Bloom filters in production systems.
@@ -49,9 +50,9 @@ A Bloom filter is a **probabilistic**(_it can give you results that are probably
 It allows you to check for membership in a set, but it has a small chance of false positives.
 
 This means:
+
 - If it says “no”, the item is definitely not in the set.
 - If it says “yes”, the item might be in the set.
-
 
 Here is a simple diagram showing how a Bloom filter works between a client and storage:
 
@@ -76,16 +77,19 @@ sequenceDiagram
 </pre>
 
 In this diagram, you can see:
+
 - When the filter says “no”, there is no need to check the storage.
 - When it says “yes”, it might be a true positive or a false positive, leading to unnecessary disk access.
 
 Bloom filters use:
+
 - Bit arrays to store data.
 - Multiple hash functions to map items to bits in the array. Using more than one hash function helps spread the items across the bit array and reduces the chance of false positives.
 
 Because of their efficiency, Bloom filters are widely used in real-world systems.
 
 For example, they are used in:
+
 - Web crawlers to check if a URL has already been visited.
 - URL shorteners to quickly check if a short code already exists before creating a new one.
 - Databases and caches to avoid unnecessary disk lookups.
@@ -129,7 +133,7 @@ Here is how it works step by step:
 When you add an item to the Bloom filter, it runs the item through several hash functions.
 Each hash function returns an index in the bit array.
 The filter sets the bits at these indexes to **1**.
-**Using multiple hash functions**[*](#why-multiple-hash-functions) ensures that each item affects multiple bits, which makes the filter more accurate.
+**Using multiple hash functions**[\*](#why-multiple-hash-functions) ensures that each item affects multiple bits, which makes the filter more accurate.
 
 <pre class="mermaid">
 graph TB
@@ -230,19 +234,24 @@ As more items are added, the chance of these overlaps increases.
 ### Why Multiple Hash Functions?
 
 **If we used only one hash function:**
+
 - Every item would set only one bit in the bit array.
 - Different items could easily set the same bit (collision), causing high false positive rates.
 
 **By using k different hash functions:**
+
 - Each item sets k bits in the array.
 - When checking, all k bits must be set to return “maybe in the set”.
 - This makes it less likely that multiple items accidentally match all k bits, reducing false positives.
 
 **In short:**
+
 - More hash functions = better accuracy (up to a point).
 
 However, using too many hash functions will slow down the filter without giving much improvement.
+
  
+
 ## Example Implementation Go
 
 Let’s implement a simple Bloom filter in Go to understand how it works in practice.
@@ -339,6 +348,7 @@ Redis Stack makes this easy because it includes RedisBloom by default, along wit
 ### What is Redis Stack?
 
 Redis Stack is an enhanced version of Redis that combines:
+
 - Core Redis data structures
 - Modules such as Bloom filters, JSON, Search, and TimeSeries
 
@@ -369,7 +379,7 @@ docker exec -it <container_id_or_name> redis-cli
 
 This will open the Redis CLI inside your running Redis Stack container. You can now run commands like:
 
-```bash 
+```bash
 
 # Create a Bloom filter named myfilter
 BF.RESERVE myfilter 0.01 1000
@@ -453,10 +463,12 @@ func (rbf *RedisBloomFilter) Check(item string) (bool, error) {
 ## Conclusion
 
 In this post, we explored Bloom filters, a powerful and memory-efficient data structure that:
+
 - Allows fast membership checks with a small chance of false positives
 - Uses bit arrays and multiple hash functions to store and check data efficiently
 
 We:
+
 - Learned what Bloom filters are and how they work
 - Implemented a simple Bloom filter in Go using xxHash and bit-level storage
 - Integrated Bloom filters with Redis Stack for scalable and distributed systems
